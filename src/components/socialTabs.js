@@ -1,23 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    UilLinkedinAlt,
-    UilGithubAlt,
-    UilTwitterAlt,
-} from "@iconscout/react-unicons";
+    faDev,
+    faLinkedin,
+    faTwitterSquare,
+    faGithubSquare,
+} from "@fortawesome/free-brands-svg-icons";
 import { Anchor } from "../atoms/anchor";
 import { style, mediaQueries } from "../../styles/style";
-import dev from "../../public/assets/dev.svg";
-import Image from "next/image";
-
-const socialIcons = css`
-    height: 3.5rem;
-    width: 3.5rem;
-    transition: border 0.3s;
-    vertical-align: center;
-    text-align: center;
-`;
 
 const asideStyle = css`
     ${mediaQueries[3]} {
@@ -39,13 +30,21 @@ const ulStyle = css`
 `;
 
 const liStyle = css`
-    margin: 1rem 1.5rem;
+    margin: 1rem 2rem;
     border-radius: 50%;
     border: ${style.border.thickness} solid transparent;
-    padding: 1.2rem 1rem 0.5rem;
+    padding: 1.5rem;
     transition: ease-in 0.3s;
+
+    color: ${style.color.grey};
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover {
         border: ${style.border.thickness} solid ${style.border.color};
+        color: ${style.color.white};
     }
 `;
 
@@ -55,32 +54,54 @@ export function SocialTabs() {
             <ul css={ulStyle}>
                 <li css={liStyle}>
                     <Anchor
-                        content={<UilGithubAlt css={socialIcons} />}
-                        link="https://github.com/mritunjaysaha"
-                    />
-                </li>
-                <li css={liStyle}>
-                    <Anchor
-                        content={<UilTwitterAlt css={socialIcons} />}
-                        link="https://github.com/mritunjaysaha"
-                    />
-                </li>
-                <li css={liStyle}>
-                    <Anchor
-                        content={<UilLinkedinAlt css={socialIcons} />}
-                        link="https://github.com/mritunjaysaha"
+                        content={
+                            <FontAwesomeIcon
+                                icon={faGithubSquare}
+                                css={css`
+                                    font-size: 4rem;
+                                `}
+                            />
+                        }
+                        href="https://github.com/mritunjaysaha"
                     />
                 </li>
                 <li css={liStyle}>
                     <Anchor
                         content={
-                            <img
-                                src="/assets/dev.svg"
-                                alt="dev"
-                                css={socialIcons}
+                            <FontAwesomeIcon
+                                icon={faTwitterSquare}
+                                css={css`
+                                    font-size: 4rem;
+                                `}
                             />
                         }
-                        link="https://dev.to/mritunjaysaha"
+                        href="https://github.com/mritunjaysaha"
+                    />
+                </li>
+                <li css={liStyle}>
+                    <Anchor
+                        content={
+                            <FontAwesomeIcon
+                                icon={faLinkedin}
+                                css={css`
+                                    font-size: 4rem;
+                                `}
+                            />
+                        }
+                        href="https://github.com/mritunjaysaha"
+                    />
+                </li>
+                <li css={liStyle}>
+                    <Anchor
+                        content={
+                            <FontAwesomeIcon
+                                icon={faDev}
+                                css={css`
+                                    font-size: 4rem;
+                                `}
+                            />
+                        }
+                        href="https://dev.to/mritunjaysaha"
                     />
                 </li>
             </ul>

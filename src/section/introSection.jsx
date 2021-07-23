@@ -40,7 +40,7 @@ export function IntroSection() {
                     Hey, I'm{" "}
                     <span
                         css={css`
-                            color: ${style.color.textColor};
+                            color: ${style.color.blue};
                             text-decoration: underline;
                         `}
                     >

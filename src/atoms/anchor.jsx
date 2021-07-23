@@ -1,16 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-export function Anchor({ link, fontWeight, content }) {
+export function Anchor({ href, content }) {
     return (
         // <Link  passHref={passHref}>
         <a
             target="_blank"
-            href={link || "#"}
+            href={href || "#"}
             css={css`
                 color: inherit;
                 text-decoration: none;
-                font-weight: ${fontWeight || "normal"};
                 cursor: pointer;
             `}
             rel="noopener noreferrer"

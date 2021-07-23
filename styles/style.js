@@ -1,27 +1,30 @@
 export const style = {
     color: {
-        white: "#EDF2F7",
-        black: "#16161d",
-        textColor: "hsl(225, 53%, 35%)",
-        blue: "hsl(199.2, 77.4%, 89.9%)",
+        grey: "#777676",
+        black: "#101011",
+        blue: "hsl(225, 53%, 35%)",
+        lightBlue: "hsl(199.2, 77.4%, 75%)",
+        white: "#AAABAB",
     },
     font: {
         size: {
-            small: "1.8rem",
-            medium: "2.4rem",
-            large: "3rem",
+            fs18: "1.8rem",
+            fs24: "2.4rem",
+            fs30: "3rem",
         },
         weight: {
             bold: 700,
         },
     },
     border: {
-        thickness: "2.5px",
+        thickness: ".25rem",
         color: "hsl(199.2, 77.4%, 60.9%)",
+        radius: ".5rem",
     },
     paddingSide: {
         mobile: "2rem",
     },
+    transition: {},
 };
 
 const breakPoints = [567, 768, 996, 1200];

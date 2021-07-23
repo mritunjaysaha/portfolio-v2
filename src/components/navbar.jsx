@@ -45,7 +45,6 @@ export function Navbar() {
                 <Anchor
                     content="@MritunjaySaha_"
                     link="https://twitter.com/MritunjaySaha_"
-                    fontWeight={style.font.weight.bold}
                 />
             </div>
 
@@ -62,7 +61,7 @@ export function Navbar() {
                     }
 
                     div {
-                        background: ${style.color.black};
+                        background: ${style.color.grey};
                         height: 0.4rem;
                         width: 3.2rem;
 
@@ -79,121 +78,30 @@ export function Navbar() {
             {/* Navbar menu */}
             <ul
                 css={css`
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background: ${style.color.black};
-
-                    display: ${isMenuClicked ? "flex" : "none"};
-                    flex-direction: column;
-
-                    height: 100vh;
-                    width: 100vw;
-
-                    z-index: 10;
+                    display: flex;
 
                     li {
-                        list-style: none;
-                        width: inherit;
-                        padding-top: 4rem;
-                        padding-left: 4rem;
-
-                        &:first-child {
-                            padding-top: 12rem;
-                        }
+                        margin: 0 2rem;
 
                         a {
-                            color: ${style.color.white};
-                            font-size: ${style.font.size.medium};
-                            font-weight: ${style.font.weight.bold};
-                            text-transform: uppercase;
-                            letter-spacing: 0.4rem;
-
-                            /* border-bottom: ${style.border.thickness} solid
-                                ${style.color.white}; */
-
-                            background-image: linear-gradient(
-                                to left,
-                                ${style.color.white},
-                                ${style.color.white}
-                            );
-                            background-size: 36% ${style.border.thickness};
-                            background-repeat: no-repeat;
-                            background-position: left bottom;
-                        }
-                    }
-                    ${mediaQueries[3]} {
-                        position: unset;
-                        height: max-content;
-                        width: max-content;
-
-                        background: none;
-
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        li {
-                            transition: 0.3s all;
-                            padding: 0;
-                            margin: 1rem 2.5rem;
-
-                            &:first-child {
-                                margin-left: 0;
-                            }
-
-                            &:last-child {
-                                margin-right: 0;
-                            }
-
-                            a {
-                                background: none;
-                                padding: 1rem 2.5rem;
+                            color: ${style.color.grey};
+                            background-color: transparent;
+                            padding: 1rem 2rem;
+                            border-radius: ${style.border.radius};
+                            &:hover {
+                                background-color: ${style.color.lightBlue};
                                 color: ${style.color.black};
-                                transition: 0.3s all;
-                                border-radius: 0.5rem;
-                                /* border: ${style.border.thickness} solid
-                                    transparent; */
-                                font-size: ${style.font.size.small};
-                                letter-spacing: unset;
-                                text-transform: capitalize;
-
-                                &:hover {
-                                    background: ${style.color.blue};
-                                    /* border: ${style.border.thickness} solid
-                                        ${style.border.color}; */
-                                }
                             }
+                        }
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
+                        &:last-of-type {
+                            margin-right: 0;
                         }
                     }
                 `}
             >
-                <li
-                    css={css`
-                        ${mediaQueries[3]} {
-                            display: none;
-                        }
-                    `}
-                >
-                    {/* close button */}
-                    <p
-                        css={css`
-                            position: absolute;
-                            top: 4rem;
-                            right: 4rem;
-
-                            display: ${isMenuClicked ? "flex" : "none"};
-
-                            color: ${style.color.white};
-                            font-size: 4rem;
-                            font-weight: ${style.font.weight.bold};
-                        `}
-                        onClick={handleCloseBtn}
-                    >
-                        &times;
-                    </p>
-                </li>
                 <li>
                     <Anchor content="Projects" link="/projects" />
                 </li>

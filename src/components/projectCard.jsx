@@ -84,11 +84,11 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                             flex-wrap: wrap;
 
                             p {
-                                background-color: ${style.color.blue};
+                                background-color: ${style.color.textLightBlue};
                                 border: ${style.border.thickness} solid
                                     ${style.border.color};
                                 border-radius: 0.5rem;
-                                font-size: ${style.font.size.small};
+                                font-size: ${style.font.size.fs18};
 
                                 padding: 0.6rem 1.4rem;
                                 margin: 0 0.4rem 0.4rem;
@@ -118,7 +118,7 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                                 ${style.border.color};
                             border-radius: 0.5rem;
 
-                            font-size: ${style.font.size.small};
+                            font-size: ${style.font.size.fs18};
 
                             padding: 0.6rem 1.4rem;
                             margin: 0 0.4rem 0.4rem;
