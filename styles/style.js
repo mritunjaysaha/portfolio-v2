@@ -24,7 +24,7 @@ export const style = {
     },
 };
 
-const breakPoints = [567, 768, 992, 1200];
+const breakPoints = [567, 768, 996, 1200];
 
 export const mediaQueries = breakPoints.map(
     (bp) => `@media only screen and (min-width: ${bp}px)`

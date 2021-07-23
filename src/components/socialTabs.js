@@ -8,6 +8,8 @@ import {
 } from "@iconscout/react-unicons";
 import { Anchor } from "../atoms/anchor";
 import { style, mediaQueries } from "../../styles/style";
+import dev from "../../public/assets/dev.svg";
+import Image from "next/image";
 
 const socialIcons = css`
     height: 3.5rem;
@@ -73,8 +75,8 @@ export function SocialTabs() {
                     <Anchor
                         content={
                             <img
-                                src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
-                                alt="DEV Profile"
+                                src="/assets/dev.svg"
+                                alt="dev"
                                 css={socialIcons}
                             />
                         }

@@ -49,14 +49,14 @@ export function IntroSection() {
                 </h1>
                 <p
                     css={css`
-                        line-height: 2rem;
+                        line-height: 3rem;
                         ${mediaQueries[3]} {
                             font-size: 2.5rem;
                         }
                     `}
                 >
-                    Aspiring Front-end developer
-                    <br />3<sup>rd</sup> year CSE at NERIST
+                    <p>Aspiring Front-end developer</p>
+                    <p>Final year CSE at NERIST</p>
                 </p>
             </header>
             <ImageSlider />
