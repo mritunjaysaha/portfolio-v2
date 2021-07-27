@@ -28,6 +28,7 @@ const Nav = styled.nav`
             padding: 1rem 2rem;
 
             text-align: center;
+            font-weight: 700;
 
             border-radius: ${(props) => props.theme.border.radius};
             border: 0 solid transparent;
@@ -38,13 +39,12 @@ const Nav = styled.nav`
 
             &:hover {
                 background-color: ${(props) => props.theme.color.blue};
-                color: ${(props) => props.theme.color.hoverNav};
+                color: ${(props) => props.theme.color.black};
             }
         }
 
         .ul-li--active {
             color: ${(props) => props.theme.color.activeNav};
-            border-radius: 0;
             border-bottom: ${(props) => props.theme.border.thickness} solid
                 ${(props) => props.theme.color.activeNav};
         }
