@@ -5,6 +5,7 @@ const color = {
     white: "#f9f9f9",
     blue: "hsl(199.2, 77.4%, 89.9%)",
     lightBlue: "hsl(199.2, 77.4%, 50.9%)",
+    darkBlue: "hsl(199.2, 77.4%, 30.9%)",
 };
 
 export const theme = {
@@ -14,9 +15,11 @@ export const theme = {
         white: color.white,
         blue: color.blue,
         activeNav: color.lightBlue,
+        hoverNav: color.darkBlue,
     },
     backgroundColor: {
         primary: color.black,
+        activeNav: color.lightBlue,
     },
     fontSize: {
         fs12: "1.2rem",

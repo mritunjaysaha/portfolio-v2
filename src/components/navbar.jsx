@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { theme } from "../../theme.config";
+import { navItems } from "../../data";
 
 const Logo = styled.div`
     margin-bottom: 1rem;
@@ -37,7 +38,7 @@ const Nav = styled.nav`
 
             &:hover {
                 background-color: ${(props) => props.theme.color.blue};
-                color: ${(props) => props.theme.color.blueText};
+                color: ${(props) => props.theme.color.hoverNav};
             }
         }
 
@@ -50,12 +51,6 @@ const Nav = styled.nav`
     }
 `;
 
-const navItems = [
-    { href: "/", name: "home" },
-    { href: "/blogs", name: "blogs" },
-    { href: "/projects", name: "projects" },
-];
-
 export function Navbar() {
     const router = useRouter();
 
@@ -67,21 +62,19 @@ export function Navbar() {
                 </Logo>
                 <ul>
                     {navItems.map((items) => (
-                        <li key={items.name} className="ul-li--active">
+                        <li
+                            key={items.name}
+                            className={
+                                router.pathname.split("/").includes(items.name)
+                                    ? "ul-li--active"
+                                    : ""
+                            }
+                        >
                             <Link href={items.href ? items.href : ""}>
                                 {items.name}
                             </Link>
                         </li>
                     ))}
-                    {/* <li>
-                        <Link href="/"></Link>
-                    </li>
-                    <li>
-                        <Link href="/blogs">blogs</Link>
-                    </li>
-                    <li>
-                        <Link href="/projects">projects</Link>
-                    </li> */}
                 </ul>
             </Nav>
         </ThemeProvider>
