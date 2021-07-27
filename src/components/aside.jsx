@@ -1,3 +1,5 @@
+/**@jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -5,16 +7,7 @@ import {
     faGithubSquare,
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
-
-const listData = [
-    { name: "github", href: "https://github", icon: `${faDev}` },
-    { name: "twitter", href: "https://twitter", icon: `${faDev}` },
-    { name: "dev.to", href: "https://dev.to", icon: `${faDev}` },
-];
-
-const size = "1x";
-
-const Li = styled.li``;
+import { Anchor } from "../atoms/anchor";
 
 const StyledAside = styled.aside`
     position: absolute;
@@ -27,8 +20,12 @@ const StyledAside = styled.aside`
     justify-content: center;
 
     height: 100vh;
+    background-color: blue;
+    padding: 0 1rem;
+`;
 
-    background-color: yellow;
+const Li = styled.li`
+    margin: 1rem;
 `;
 
 export function Aside() {
@@ -37,25 +34,26 @@ export function Aside() {
             <StyledAside>
                 <ul>
                     <Li>
-                        <a href="">
-                            <FontAwesomeIcon icon={faDev} size={size} />
-                        </a>
+                        <Anchor href="">
+                            <FontAwesomeIcon
+                                icon={faDev}
+                                css={css`
+                                    font-size: 4rem;
+                                    color: black;
+                                    height: 3rem;
+                                `}
+                            />
+                        </Anchor>
                     </Li>
                     <Li>
-                        <a href="">
-                            <FontAwesomeIcon
-                                icon={faGithubSquare}
-                                size={size}
-                            />
-                        </a>
+                        <Anchor href="">
+                            <FontAwesomeIcon icon={faGithubSquare} size="lg" />
+                        </Anchor>
                     </Li>
                     <Li>
-                        <a href="">
-                            <FontAwesomeIcon
-                                icon={faTwitterSquare}
-                                size={size}
-                            />
-                        </a>
+                        <Anchor href="">
+                            <FontAwesomeIcon icon={faTwitterSquare} />
+                        </Anchor>
                     </Li>
                 </ul>
             </StyledAside>
