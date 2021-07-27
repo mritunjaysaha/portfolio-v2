@@ -1,9 +1,6 @@
 import styled from "@emotion/styled";
-import { styles } from "../../styles";
 
-const StyledFooter = styled.footer`
-    padding: 0 ${styles.padding.paddingDesktop};
-`;
+const StyledFooter = styled.footer``;
 
 export function Footer() {
     return <StyledFooter>email</StyledFooter>;

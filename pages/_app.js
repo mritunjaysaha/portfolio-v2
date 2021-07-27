@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import { Navbar } from "../src/components/navbar";
 import { Footer } from "../src/components/footer";
 import { Aside } from "../src/components/aside";
-import { theme } from "../theme";
+import { theme } from "../theme.config";
 
 function MyApp({ Component, pageProps }) {
     return (

@@ -8,7 +8,7 @@ import {
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { Anchor } from "../atoms/anchor";
-import { theme } from "../../theme";
+import { theme } from "../../theme.config";
 const StyledAside = styled.aside`
     position: absolute;
     top: 0;

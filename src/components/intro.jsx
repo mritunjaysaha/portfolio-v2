@@ -1,7 +1,7 @@
 /**@jsxImportSource @emotion/react */
 import { css, ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import { theme } from "../../theme";
+import { theme } from "../../theme.config";
 
 const StyledSection = styled.section`
     grid-area: content;
@@ -18,7 +18,9 @@ const StyledSection = styled.section`
     article {
         grid-column: 2 / span 12;
         text-transform: capitalize;
-
+        /**
+        TODO Different font for h3 and p
+        */
         .article-p-white {
             text-transform: uppercase;
             font-weight: bold;
@@ -34,6 +36,7 @@ const StyledSection = styled.section`
         .article-p-developer {
             text-transform: uppercase;
             font-size: ${(props) => props.theme.fontSize.fs20};
+            font-weight: bold;
         }
 
         .article-p-about {

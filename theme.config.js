@@ -3,6 +3,8 @@ const color = {
     grey: "#767677",
     lightGrey: "#A4A4A4",
     white: "#f9f9f9",
+    blue: "hsl(199.2, 77.4%, 89.9%)",
+    blueText: "hsl(199.2, 77.4%, 20.9%)",
 };
 
 export const theme = {
@@ -10,6 +12,8 @@ export const theme = {
         primary: color.grey,
         secondary: color.lightGrey,
         white: color.white,
+        blue: color.blue,
+        blueText: color.blueText,
     },
     backgroundColor: {
         primary: color.black,
@@ -25,5 +29,8 @@ export const theme = {
         fs32: "3.2rem",
         fs36: "3.6rem",
         fs40: "4rem",
+    },
+    border: {
+        radius: "0.25rem",
     },
 };
