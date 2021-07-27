@@ -4,7 +4,7 @@ const color = {
     lightGrey: "#A4A4A4",
     white: "#f9f9f9",
     blue: "hsl(199.2, 77.4%, 89.9%)",
-    blueText: "hsl(199.2, 77.4%, 20.9%)",
+    lightBlue: "hsl(199.2, 77.4%, 50.9%)",
 };
 
 export const theme = {
@@ -13,7 +13,7 @@ export const theme = {
         secondary: color.lightGrey,
         white: color.white,
         blue: color.blue,
-        blueText: color.blueText,
+        activeNav: color.lightBlue,
     },
     backgroundColor: {
         primary: color.black,
@@ -32,5 +32,6 @@ export const theme = {
     },
     border: {
         radius: "0.25rem",
+        thickness: "0.2rem",
     },
 };
