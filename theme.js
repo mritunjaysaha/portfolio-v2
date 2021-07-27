@@ -2,14 +2,16 @@ const color = {
     black: "#111111",
     grey: "#767677",
     lightGrey: "#A4A4A4",
+    white: "#f9f9f9",
 };
 
 export const theme = {
-    colors: {
+    color: {
         primary: color.grey,
         secondary: color.lightGrey,
+        white: color.white,
     },
-    background: {
+    backgroundColor: {
         primary: color.black,
     },
     fontSize: {

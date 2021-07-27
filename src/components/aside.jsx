@@ -1,5 +1,5 @@
 /**@jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css, ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +8,7 @@ import {
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { Anchor } from "../atoms/anchor";
-
+import { theme } from "../../theme";
 const StyledAside = styled.aside`
     position: absolute;
     top: 0;
@@ -20,7 +20,6 @@ const StyledAside = styled.aside`
     justify-content: center;
 
     height: 100vh;
-    background-color: blue;
     padding: 0 1rem;
 `;
 
@@ -28,35 +27,36 @@ const Li = styled.li`
     margin: 1rem;
 `;
 
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+    font-size: 4rem;
+    color: ${(props) => props.theme.color.primary};
+    height: 3rem;
+`;
+
 export function Aside() {
     return (
         <>
-            <StyledAside>
-                <ul>
-                    <Li>
-                        <Anchor href="">
-                            <FontAwesomeIcon
-                                icon={faDev}
-                                css={css`
-                                    font-size: 4rem;
-                                    color: black;
-                                    height: 3rem;
-                                `}
-                            />
-                        </Anchor>
-                    </Li>
-                    <Li>
-                        <Anchor href="">
-                            <FontAwesomeIcon icon={faGithubSquare} size="lg" />
-                        </Anchor>
-                    </Li>
-                    <Li>
-                        <Anchor href="">
-                            <FontAwesomeIcon icon={faTwitterSquare} />
-                        </Anchor>
-                    </Li>
-                </ul>
-            </StyledAside>
+            <ThemeProvider theme={theme}>
+                <StyledAside>
+                    <ul>
+                        <Li>
+                            <Anchor href="">
+                                <StyledFontAwesomeIcon icon={faDev} />
+                            </Anchor>
+                        </Li>
+                        <Li>
+                            <Anchor href="">
+                                <StyledFontAwesomeIcon icon={faGithubSquare} />
+                            </Anchor>
+                        </Li>
+                        <Li>
+                            <Anchor href="">
+                                <StyledFontAwesomeIcon icon={faTwitterSquare} />
+                            </Anchor>
+                        </Li>
+                    </ul>
+                </StyledAside>
+            </ThemeProvider>
         </>
     );
 }
