@@ -1,5 +1,5 @@
 /**JsxImportSource @emotion/react */
-import { ThemeProvider, keyframes, css } from "@emotion/react";
+import { css, ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,10 +8,10 @@ import {
     faSass,
     faReact,
     faJs,
+    faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
+import { SiNextDotJs, SiMongodb } from "react-icons/si";
 import { theme } from "../../theme.config";
-
-const sliding = keyframes`100%{transform: translateX(-450px)}`;
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${(props) => props.theme.color.primary};
@@ -34,11 +34,19 @@ const StyledUl = styled.ul`
     li {
         transform: translate3d(0, 0, 0);
     }
+
+    .si-icon {
+        color: ${(props) => props.theme.color.primary};
+        font-size: 12rem;
+        color: ${(props) => props.theme.color.blue};
+        width: auto;
+        height: 12rem;
+    }
 `;
 
 const StyledDiv = styled.div`
     display: flex;
-    width: 1600px;
+    width: 2000px;
 
     .mover-1 {
         animation: moveSlideshow 12s linear infinite;
@@ -80,6 +88,15 @@ export function IconsContainer() {
                     </li>
                     <li>
                         <StyledFontAwesomeIcon icon={faReact} />
+                    </li>
+                    <li>
+                        <StyledFontAwesomeIcon icon={faNodeJs} />
+                    </li>
+                    <li>
+                        <SiNextDotJs className="si-icon" />
+                    </li>
+                    <li>
+                        <SiMongodb className="si-icon" />
                     </li>
                 </StyledUl>
                 <StyledUl className="mover-2">
