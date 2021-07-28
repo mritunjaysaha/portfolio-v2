@@ -48,6 +48,13 @@ const Nav = styled.nav`
             color: ${(props) => props.theme.color.activeNav};
             border-bottom: ${(props) => props.theme.border.thickness} solid
                 ${(props) => props.theme.color.activeNav};
+
+            &:hover {
+                background-color: ${(props) =>
+                    props.theme.backgroundColor.primary};
+
+                color: ${(props) => props.theme.color.activeNav};
+            }
         }
     }
 `;
