@@ -38,7 +38,8 @@ const Nav = styled.nav`
             transition: 0.3s ease-in;
 
             &:hover {
-                background-color: ${(props) => props.theme.color.blue};
+                background-color: ${(props) =>
+                    props.theme.backgroundColor.primaryBlue};
                 color: ${(props) => props.theme.color.black};
             }
         }

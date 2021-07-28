@@ -37,6 +37,8 @@ const StyledSection = styled.section`
             text-transform: uppercase;
             font-size: ${(props) => props.theme.fontSize.fs20};
             font-weight: bold;
+
+            color: ${(props) => props.theme.color.blue};
         }
 
         .article-p-about {
@@ -58,7 +60,10 @@ const StyledSection = styled.section`
             font-weight: bold;
             letter-spacing: 0.4rem;
 
-            background-color: green;
+            background-color: ${(props) =>
+                props.theme.backgroundColor.primaryBlue};
+
+            cursor: pointer;
         }
     }
 `;

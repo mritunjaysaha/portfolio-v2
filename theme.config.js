@@ -18,7 +18,8 @@ export const theme = {
     },
     backgroundColor: {
         primary: color.black,
-        activeNav: color.lightBlue,
+        primaryBlue: color.blue,
+        secondaryBlue: color.lightBlue,
     },
     fontSize: {
         fs12: "1.2rem",
