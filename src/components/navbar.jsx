@@ -1,5 +1,5 @@
 /** JsxImportSour @emotion/react */
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -36,7 +36,7 @@ const Nav = styled.nav`
             border-bottom: ${(props) => props.theme.border.thickness};
 
             transition: 0.3s ease-in;
-
+            cursor: pointer;
             &:hover {
                 background-color: ${(props) =>
                     props.theme.backgroundColor.primaryBlue};
@@ -63,18 +63,23 @@ export function Navbar() {
                 </Logo>
                 <ul>
                     {navItems.map((items) => (
-                        <li
+                        <Link
                             key={items.name}
-                            className={
-                                router.pathname.split("/").includes(items.name)
-                                    ? "ul-li--active"
-                                    : ""
-                            }
+                            href={items.href ? items.href : ""}
+                            passHref
                         >
-                            <Link href={items.href ? items.href : ""}>
+                            <li
+                                className={
+                                    router.pathname
+                                        .split("/")
+                                        .includes(items.name)
+                                        ? "ul-li--active"
+                                        : ""
+                                }
+                            >
                                 {items.name}
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
                     ))}
                 </ul>
             </Nav>
