@@ -16,7 +16,6 @@ import { theme } from "../../theme.config";
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${(props) => props.theme.color.primary};
     font-size: 12rem;
-    color: ${(props) => props.theme.color.blue};
     width: auto;
     height: 12rem;
 `;
@@ -38,7 +37,6 @@ const StyledUl = styled.ul`
     .si-icon {
         color: ${(props) => props.theme.color.primary};
         font-size: 12rem;
-        color: ${(props) => props.theme.color.blue};
         width: auto;
         height: 12rem;
     }
@@ -49,7 +47,7 @@ const StyledDiv = styled.div`
     width: 200rem;
 
     .mover-1 {
-        animation: moveSlideshow 12s linear infinite alternate-reverse;
+        animation: moveSlideshow 30s linear infinite alternate-reverse;
         width: 260rem;
     }
 
