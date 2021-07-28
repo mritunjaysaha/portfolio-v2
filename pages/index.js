@@ -1,5 +1,7 @@
 import Head from "next/head";
+import { CircularLoading } from "../src/components/circularLoading";
 import { Intro } from "../src/components/intro";
+
 export default function Home() {
     return (
         <div>
