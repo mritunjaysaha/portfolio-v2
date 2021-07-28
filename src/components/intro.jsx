@@ -54,7 +54,7 @@ const StyledSection = styled.section`
             width: 16rem;
             text-transform: uppercase;
 
-            margin-top: 1.5rem;
+            margin-top: 4rem;
             padding: 1.6rem 2rem;
 
             font-size: ${(props) => props.theme.fontSize.fs12};
@@ -86,7 +86,7 @@ export function Intro() {
                         <p className="article-p-about">
                             I&apos;m a frontend developer based in Assam, India
                         </p>
-                        <button className="article-button">hire me</button>
+                        {/* <button className="article-button">hire me</button> */}
                     </article>
 
                     <StyledIconsContainer>
