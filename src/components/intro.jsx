@@ -1,22 +1,24 @@
 /**@jsxImportSource @emotion/react */
-import { css, ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 import { theme } from "../../theme.config";
+import { IconsContainer } from "./iconsContainer";
 
 const StyledSection = styled.section`
-    grid-area: content;
     position: relative;
 
     background-color: ${(props) => props.theme.backgroundColor.primary};
 
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 1fr;
     align-items: center;
 
     height: 60rem;
 
     article {
-        grid-column: 2 / span 12;
+        grid-row: 1;
+        grid-column: 2 / span 4;
         text-transform: capitalize;
         /**
         TODO Different font for h3 and p
@@ -67,6 +69,10 @@ const StyledSection = styled.section`
         }
     }
 `;
+const StyledIconsContainer = styled.section`
+    grid-row: 1;
+    grid-column: 7 / span 12;
+`;
 
 export function Intro() {
     return (
@@ -82,6 +88,10 @@ export function Intro() {
                         </p>
                         <button className="article-button">hire me</button>
                     </article>
+
+                    <StyledIconsContainer>
+                        <IconsContainer />
+                    </StyledIconsContainer>
                 </StyledSection>
             </ThemeProvider>
         </>
