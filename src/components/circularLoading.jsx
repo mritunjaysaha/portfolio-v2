@@ -1,114 +1,96 @@
+/**JsxImportSource @emotion/react */
+import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import { faDev } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const StyledLoader = styled.div`
-    display: grid;
-    height: 100%;
-    text-align: center;
-    place-items: center;
+import { theme } from "../../theme.config";
 
-    * {
+const StyledDiv = styled.div`
+    button {
         overflow: hidden;
-    }
-    .circular {
-        height: 60px;
-        width: 60px;
+        background: none;
+        border: 0;
+        box-sizing: border-box;
+
+        // Required, since we're setting absolute on pseudo-elements
         position: relative;
-    }
-
-    .circular .inner {
-        position: absolute;
-        z-index: 6;
-        top: 50%;
-        left: 50%;
-        height: 50px;
-        width: 50px;
-        margin: -24.5px 0 0 -24.5px;
-        background: red;
-        border-radius: 100%;
-    }
-
-    .circular .number {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        font-weight: 500;
-        color: #4158d0;
-
+        vertical-align: middle;
         display: grid;
-
         place-items: center;
-    }
 
-    .circular .bar {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: #fff;
-        -webkit-border-radius: 100%;
-        clip: rect(0px, 60px, 60px, 30px);
-    }
-
-    .circle .bar .progress {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        -webkit-border-radius: 100%;
-        clip: rect(0px, 30px, 60px, 0px);
-        background: #4158d0;
-    }
-
-    .circle .left .progress {
-        z-index: 1;
-        animation: left 1s linear both;
-    }
-    @keyframes left {
-        100% {
-            transform: rotate(180deg);
+        &::before,
+        &::after {
+            box-sizing: inherit;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
     }
-    .circle .right {
-        transform: rotate(180deg);
-        z-index: 3;
+    .spin {
+        width: 4em;
+        height: 4em;
+        padding: 0;
+
+        &:hover {
+            color: $blue;
+        }
+
+        &::before,
+        &::after {
+            top: 0;
+            left: 0;
+        }
+
+        &::before {
+            border: ${(props) => props.theme.border.thickness} solid transparent; // We're animating border-color again
+        }
+
+        &:hover::before {
+            border-top-color: ${(props) =>
+                props.theme.color.blue}; // Show borders
+            border-right-color: ${(props) => props.theme.color.blue};
+            border-bottom-color: ${(props) => props.theme.color.blue};
+
+            transition: border-top-color 0.15s linear,
+                // Stagger border appearances
+                border-right-color 0.15s linear 0.1s,
+                border-bottom-color 0.15s linear 0.2s;
+        }
+
+        &::after {
+            border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
+        }
+
+        &:hover::after {
+            border-top: ${(props) => props.theme.border.thickness} solid
+                ${(props) => props.theme.color.blue}; // Shows border
+            border-left-width: ${(props) =>
+                props.theme.border.thickness}; // Solid edges, invisible borders
+            border-right-width: ${(props) =>
+                props.theme.border.thickness}; // Solid edges, invisible borders
+            transform: rotate(270deg); // Rotate around circle
+            transition: transform 0.4s linear 0s,
+                border-left-width 0s linear 0.35s; // Solid edge post-rotation
+        }
     }
-    .circle .right .progress {
-        animation: right 1s linear both;
-        animation-delay: 1s;
-    }
-    @keyframes right {
-        100% {
-            transform: rotate(180deg);
+
+    .circle {
+        border-radius: 100%;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+            border-radius: 100%;
         }
     }
 `;
 
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-    height: 3rem;
-    font-size: 3rem;
-    margin: 0;
-    padding: 0;
-`;
-
-export function CircularLoading() {
+export function CircularLoading({ children }) {
     return (
-        <StyledLoader>
-            <div className="circular">
-                <div className="inner"></div>
-                <div className="number">
-                    <StyledFontAwesomeIcon icon={faDev} />
-                </div>
-                <div className="circle">
-                    <div className="bar left">
-                        <div className="progress"></div>
-                    </div>
-                    <div className="bar right">
-                        <div className="progress"></div>
-                    </div>
-                </div>
-            </div>
-        </StyledLoader>
+        <ThemeProvider theme={theme}>
+            <StyledDiv>
+                <button className="spin circle">{children}</button>
+            </StyledDiv>
+        </ThemeProvider>
     );
 }

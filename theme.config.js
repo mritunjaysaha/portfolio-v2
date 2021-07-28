@@ -35,6 +35,6 @@ export const theme = {
     },
     border: {
         radius: "0.25rem",
-        thickness: "0.2rem",
+        thickness: "0.25rem",
     },
 };

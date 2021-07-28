@@ -1,5 +1,5 @@
 /**@jsxImportSource @emotion/react */
-import { css, ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,6 +9,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Anchor } from "../atoms/anchor";
 import { theme } from "../../theme.config";
+import { CircularLoading } from "./circularLoading";
+
 const StyledAside = styled.aside`
     position: absolute;
     top: 0;
@@ -23,14 +25,10 @@ const StyledAside = styled.aside`
     padding: 0 1rem;
 `;
 
-const Li = styled.li`
-    margin: 1rem;
-`;
-
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-    font-size: 4rem;
+    /* font-size: 4rem; */
     color: ${(props) => props.theme.color.primary};
-    height: 3rem;
+    width: 3rem;
 `;
 
 export function Aside() {
@@ -38,23 +36,21 @@ export function Aside() {
         <>
             <ThemeProvider theme={theme}>
                 <StyledAside>
-                    <ul>
-                        <Li>
-                            <Anchor href="">
-                                <StyledFontAwesomeIcon icon={faDev} />
-                            </Anchor>
-                        </Li>
-                        <Li>
-                            <Anchor href="">
-                                <StyledFontAwesomeIcon icon={faGithubSquare} />
-                            </Anchor>
-                        </Li>
-                        <Li>
-                            <Anchor href="">
-                                <StyledFontAwesomeIcon icon={faTwitterSquare} />
-                            </Anchor>
-                        </Li>
-                    </ul>
+                    <CircularLoading>
+                        <Anchor href="">
+                            <StyledFontAwesomeIcon icon={faDev} />
+                        </Anchor>
+                    </CircularLoading>
+                    <CircularLoading>
+                        <Anchor href="">
+                            <StyledFontAwesomeIcon icon={faGithubSquare} />
+                        </Anchor>
+                    </CircularLoading>
+                    <CircularLoading>
+                        <Anchor href="">
+                            <StyledFontAwesomeIcon icon={faTwitterSquare} />
+                        </Anchor>
+                    </CircularLoading>
                 </StyledAside>
             </ThemeProvider>
         </>
