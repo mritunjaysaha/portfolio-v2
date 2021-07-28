@@ -46,21 +46,11 @@ const StyledUl = styled.ul`
 
 const StyledDiv = styled.div`
     display: flex;
-    width: 2000px;
+    width: 200rem;
 
     .mover-1 {
-        animation: moveSlideshow 12s linear infinite;
-        width: 2526px;
-    }
-
-    .mover-2 {
-        animation: moveSlideshow 12s linear infinite;
-
-        width: 2226px;
-    }
-
-    .mover-1,
-    .mover-2 {
+        animation: moveSlideshow 12s linear infinite alternate-reverse;
+        width: 260rem;
     }
 
     @keyframes moveSlideshow {
@@ -84,6 +74,9 @@ export function IconsContainer() {
                         <StyledFontAwesomeIcon icon={faSass} />
                     </li>
                     <li>
+                        <SiMongodb className="si-icon" />
+                    </li>
+                    <li>
                         <StyledFontAwesomeIcon icon={faJs} />
                     </li>
                     <li>
@@ -94,26 +87,6 @@ export function IconsContainer() {
                     </li>
                     <li>
                         <SiNextDotJs className="si-icon" />
-                    </li>
-                    <li>
-                        <SiMongodb className="si-icon" />
-                    </li>
-                </StyledUl>
-                <StyledUl className="mover-2">
-                    <li>
-                        <StyledFontAwesomeIcon icon={faCss3Alt} />
-                    </li>
-                    <li>
-                        <StyledFontAwesomeIcon icon={faHtml5} />
-                    </li>
-                    <li>
-                        <StyledFontAwesomeIcon icon={faSass} />
-                    </li>
-                    <li>
-                        <StyledFontAwesomeIcon icon={faJs} />
-                    </li>
-                    <li>
-                        <StyledFontAwesomeIcon icon={faReact} />
                     </li>
                 </StyledUl>
             </StyledDiv>
