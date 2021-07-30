@@ -38,3 +38,16 @@ export const theme = {
         thickness: "0.25rem",
     },
 };
+
+export const bp = {
+    mobile: 576,
+    tablet: 768,
+    desktop: 992,
+    desktopLarge: 1200,
+};
+
+// export const media = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
+
+export function mediaQueries(name) {
+    return `@media only screen and (min-width: ${name}px)`;
+}

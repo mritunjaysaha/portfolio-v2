@@ -1,7 +1,7 @@
 /**@jsxImportSource @emotion/react */
 import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import { theme } from "../../theme.config";
+import { theme, mediaQueries, bp } from "../../theme.config";
 import { IconsContainer } from "./iconsContainer";
 
 const StyledSection = styled.section`
@@ -9,12 +9,19 @@ const StyledSection = styled.section`
 
     background-color: ${(props) => props.theme.backgroundColor.primary};
 
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: 1fr;
+    display: flex;
+
     align-items: center;
 
-    height: 60rem;
+    height: 100vh;
+
+    ${mediaQueries(bp.desktop)} {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+
+        height: 60rem;
+    }
 
     article {
         grid-row: 1;
@@ -70,8 +77,13 @@ const StyledSection = styled.section`
     }
 `;
 const StyledIconsContainer = styled.section`
-    grid-row: 1;
-    grid-column: 6 / span 12;
+    display: none;
+
+    ${mediaQueries(bp.desktop)} {
+        grid-row: 1;
+        grid-column: 6 / span 12;
+        display: block;
+    }
 `;
 
 export function Intro() {

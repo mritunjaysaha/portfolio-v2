@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { theme } from "../../theme.config";
+import { theme, mediaQueries, bp } from "../../theme.config";
 import { navItems } from "../../data";
 
 const Logo = styled.div`
@@ -13,7 +13,10 @@ const Logo = styled.div`
 `;
 
 const Nav = styled.nav`
-    display: flex;
+    display: none;
+    ${mediaQueries(bp.desktop)} {
+        display: flex;
+    }
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -22,11 +25,20 @@ const Nav = styled.nav`
     ul {
         display: flex;
 
+        width: 100%;
+
+        justify-content: space-between;
+
+        ${mediaQueries(bp.desktop)} {
+            width: 40%;
+        }
+
         li {
             text-transform: capitalize;
-            margin: 0 4rem;
-            padding: 1rem 2rem;
-
+            ${mediaQueries(bp.desktop)} {
+                margin: 0 4rem;
+                padding: 1rem 2rem;
+            }
             text-align: center;
             font-weight: 700;
 

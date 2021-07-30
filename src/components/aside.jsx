@@ -1,34 +1,31 @@
 /**@jsxImportSource @emotion/react */
 import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledFontAwesomeIcon } from "./StyledComponents/atoms";
 import {
     faDev,
     faGithubSquare,
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { Anchor } from "../atoms/anchor";
-import { theme } from "../../theme.config";
+import { theme, mediaQueries, bp } from "../../theme.config";
 import { CircularLoading } from "./circularLoading";
 
 const StyledAside = styled.aside`
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    ${mediaQueries(bp.desktop)} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-    height: 100vh;
-    padding: 0 1rem;
-`;
-
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-    /* font-size: 4rem; */
-    color: ${(props) => props.theme.color.primary};
-    width: 3rem;
+        height: 100vh;
+        padding: 0 1rem;
+    }
 `;
 
 export function Aside() {
