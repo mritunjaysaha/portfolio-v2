@@ -25,7 +25,7 @@ export function Footer() {
     return (
         <ThemeProvider theme={theme}>
             <StyledFooter>
-                <StyledFontAwesomeIcon icon={faEnvelope} size="1.5rem" />{" "}
+                <StyledFontAwesomeIcon icon={faEnvelope} width="1.5rem" />{" "}
                 <span>mritunjaysaha@outlook.com</span>
             </StyledFooter>
         </ThemeProvider>

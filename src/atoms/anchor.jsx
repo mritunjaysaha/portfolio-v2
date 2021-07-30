@@ -1,6 +1,3 @@
-/**JsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-
 export const Anchor = ({ children, href }) => (
     <a target="_blank" rel="noopener noreferrer" href={href ? href : ""}>
         {children}
