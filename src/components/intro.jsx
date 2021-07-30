@@ -3,7 +3,6 @@ import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { IconsContainer } from "./iconsContainer";
-import { useBlogData } from "../customHooks/blog";
 
 const StyledSection = styled.section`
     position: relative;
@@ -88,8 +87,6 @@ const StyledIconsContainer = styled.section`
 `;
 
 export function Intro() {
-    const blogData = useBlogData();
-
     return (
         <>
             <ThemeProvider theme={theme}>
