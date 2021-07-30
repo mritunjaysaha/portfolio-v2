@@ -71,7 +71,7 @@ const StyledSection = styled.section`
 `;
 const StyledIconsContainer = styled.section`
     grid-row: 1;
-    grid-column: 7 / span 12;
+    grid-column: 6 / span 12;
 `;
 
 export function Intro() {

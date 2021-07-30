@@ -61,7 +61,6 @@ const Nav = styled.nav`
 
 export function Navbar() {
     const router = useRouter();
-
     return (
         <ThemeProvider theme={theme}>
             <Nav>
@@ -77,9 +76,7 @@ export function Navbar() {
                         >
                             <li
                                 className={
-                                    router.pathname
-                                        .split("/")
-                                        .includes(items.name)
+                                    router.pathname === items.href
                                         ? "ul-li--active"
                                         : ""
                                 }
