@@ -209,7 +209,7 @@ export function Projects() {
                                 <ProjectCard
                                     key={data.demo}
                                     data={data}
-                                    className={gradient[count % 5]}
+                                    className={gradient[count % 4]}
                                 />
                             );
                         }

@@ -1,14 +1,5 @@
 export const projects = [
     {
-        display: false,
-        name: "Covid-19: India Stats",
-        description:
-            "A vanillaJS application to track the number of Covid-19 cases in India with the number of increase cases for each state and for each parameter.",
-        repo: "https://github.com/mritunjaysaha/coronavirus-tracker",
-        demo: "https://covidupdate.netlify.app/",
-        stack: ["JavaScript", "HTML", "CSS", "Chart.js", "Bootstrap"],
-    },
-    {
         display: true,
         name: "Markdown Previewer",
         description:
@@ -17,6 +8,31 @@ export const projects = [
         demo: "https://previewermarkdown.netlify.app/",
         stack: ["React.js", "Material-UI", "Sass"],
         gif: "markdown.gif",
+    },
+    {
+        display: true,
+        name: "Shortly",
+        description: "This project was a challenge from Frontend Mentor",
+        repo: "https://github.com/mritunjaysaha/url-shortner",
+        demo: "https://url-shortner-five.vercel.app/",
+        stack: ["HTML", "Sass", "JavaScript"],
+    },
+    {
+        display: true,
+        name: "Rock Paper Scissors",
+        description: "A rock-paper-scissor game made using VanillaJS.",
+        repo: "https://github.com/mritunjaysaha/rock-paper-scissor",
+        demo: "https://rock-paper-scissor-wheat.vercel.app/",
+        stack: ["JavaScript", "HTML", "CSS"],
+    },
+    {
+        display: true,
+        name: "Where in the world?",
+        description:
+            "A ReactJS application that shows the list of countries and their details. If the network is slow then it won't feel buggy as I have implemented loading-skeleton-placeholder.",
+        repo: "https://github.com/mritunjaysaha/rest-countries-api-with-color-switching",
+        demo: "https://rest-countries-api-with-color-switching.vercel.app/",
+        stack: ["React.js", "Material-UI", "Sass"],
     },
     {
         display: false,
@@ -37,29 +53,13 @@ export const projects = [
         stack: ["React.js", "Ant Design", "Sass", "Popup.js"],
     },
     {
-        display: true,
-        name: "Rock Paper Scissors",
-        description: "A rock-paper-scissor game made using VanillaJS.",
-        repo: "https://github.com/mritunjaysaha/rock-paper-scissor",
-        demo: "https://rock-paper-scissor-wheat.vercel.app/",
-        stack: ["JavaScript", "HTML", "CSS"],
-    },
-    {
-        display: true,
-        name: "Where in the world?",
+        display: false,
+        name: "Covid-19: India Stats",
         description:
-            "A ReactJS application that shows the list of countries and their details. If the network is slow then it won't feel buggy as I have implemented loading-skeleton-placeholder.",
-        repo: "https://github.com/mritunjaysaha/rest-countries-api-with-color-switching",
-        demo: "https://rest-countries-api-with-color-switching.vercel.app/",
-        stack: ["React.js", "Material-UI", "Sass"],
-    },
-    {
-        display: true,
-        name: "Shortly",
-        description: "This project was a challenge from Frontend Mentor",
-        repo: "https://github.com/mritunjaysaha/url-shortner",
-        demo: "https://url-shortner-five.vercel.app/",
-        stack: ["HTML", "Sass", "JavaScript"],
+            "A vanillaJS application to track the number of Covid-19 cases in India with the number of increase cases for each state and for each parameter.",
+        repo: "https://github.com/mritunjaysaha/coronavirus-tracker",
+        demo: "https://covidupdate.netlify.app/",
+        stack: ["JavaScript", "HTML", "CSS", "Chart.js", "Bootstrap"],
     },
     {
         display: false,
