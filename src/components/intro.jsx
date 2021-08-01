@@ -39,13 +39,14 @@ const StyledSection = styled.section`
         }
         .article-h3 {
             font-size: ${(props) => props.theme.fontSize.fs40};
-
+            font-family: "Roboto", sans-serif;
             padding: 2rem 0;
         }
         .article-p-developer {
             text-transform: uppercase;
             font-size: ${(props) => props.theme.fontSize.fs20};
             font-weight: bold;
+            font-family: "Roboto", sans-serif;
 
             color: ${(props) => props.theme.color.blue};
         }

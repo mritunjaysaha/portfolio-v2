@@ -10,6 +10,7 @@ import { MobileNavbar } from "./mobileNavbar";
 const Logo = styled.div`
     margin-bottom: 1rem;
     font-size: ${(props) => props.theme.fontSize.fs20};
+    font-family: "Roboto", sans-serif;
 `;
 
 const Nav = styled.nav`

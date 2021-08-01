@@ -24,6 +24,7 @@ import { Anchor } from "../../atoms/anchor";
 const Logo = styled.div`
     color: ${(props) => props.theme.color.secondary};
     font-size: ${(props) => props.theme.fontSize.fs24};
+    font-family: "Roboto", sans-serif;
 `;
 
 const StyledMenu = styled(RiMenu3Line)`
