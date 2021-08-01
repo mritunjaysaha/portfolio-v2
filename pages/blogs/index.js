@@ -9,8 +9,10 @@ import { StyledArticleBlog } from "../../src/components/StyledComponents/atoms";
 import styled from "@emotion/styled";
 
 const StyledSection = styled.section`
-    padding: 4rem;
-    min-height: 100vh;
+    ${mediaQueries(bp.desktop)} {
+        padding: 4rem;
+        min-height: 100vh;
+    }
 `;
 
 const StyledH3 = styled.h3`
