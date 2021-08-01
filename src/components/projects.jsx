@@ -100,7 +100,7 @@ const StyledProjectsContainer = styled.section`
     position: relative;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     place-items: center;
     gap: 2rem;
 
