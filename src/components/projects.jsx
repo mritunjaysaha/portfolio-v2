@@ -3,7 +3,7 @@ import { ThemeProvider, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { projects } from "../projectData/data";
 import { theme, mediaQueries, bp } from "../../theme.config";
-import { StyledFontAwesomeIcon } from "./StyledComponents/atoms";
+import { StyledIcon } from "./StyledComponents/atoms";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { Anchor } from "../atoms/anchor";
@@ -69,10 +69,6 @@ const StyledArticle = styled.article`
             white-space: pre;
         }
     }
-`;
-
-const StyledIcon = styled(StyledFontAwesomeIcon)`
-    color: ${(props) => props.theme.color.black};
 `;
 
 function ProjectCard(props) {

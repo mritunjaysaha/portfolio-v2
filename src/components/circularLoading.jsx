@@ -5,7 +5,9 @@ import styled from "@emotion/styled";
 import { theme } from "../../theme.config";
 
 const StyledDiv = styled.div`
-    button {
+    z-index: 0;
+    div {
+        z-index: 10;
         overflow: hidden;
         background: none;
         border: 0;
@@ -89,7 +91,7 @@ export function CircularLoading({ children }) {
     return (
         <ThemeProvider theme={theme}>
             <StyledDiv>
-                <button className="spin circle">{children}</button>
+                <div className="spin circle">{children}</div>
             </StyledDiv>
         </ThemeProvider>
     );

@@ -1,3 +1,5 @@
+/**jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 /**
  *
  * @param {href} href link
@@ -5,7 +7,15 @@
  */
 export const Anchor = ({ children, href }) => {
     return (
-        <a target="_blank" rel="noopener noreferrer" href={href ? href : ""}>
+        <a
+            css={css`
+                cursor: pointer;
+                z-index: 1000;
+            `}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={href ? href : ""}
+        >
             {children}
         </a>
     );
@@ -21,7 +31,6 @@ export const Anchor = ({ children, href }) => {
 export const BlogAnchor = ({ href, reading_time_minutes, title }) => (
     <p key={href}>
         <Anchor href={href}>{title}</Anchor>
-        &nbsp;&nbsp;
         <span>{reading_time_minutes} mins read</span>
     </p>
 );
