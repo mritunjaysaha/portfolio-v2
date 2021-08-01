@@ -10,9 +10,9 @@ const StyledSection = styled.section`
     background-color: ${(props) => props.theme.backgroundColor.primary};
 
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
     height: 80vh;
 
     ${mediaQueries(bp.desktop)} {
@@ -27,9 +27,7 @@ const StyledSection = styled.section`
         grid-row: 1;
         grid-column: 1 / span 4;
         text-transform: capitalize;
-        /**
-        TODO Different font for h3 and p
-        */
+
         .article-p-white {
             text-transform: uppercase;
             font-weight: bold;
@@ -78,8 +76,6 @@ const StyledSection = styled.section`
     }
 `;
 const StyledIconsContainer = styled.section`
-    display: none;
-
     ${mediaQueries(bp.desktop)} {
         grid-row: 1;
         grid-column: 6 / span 12;

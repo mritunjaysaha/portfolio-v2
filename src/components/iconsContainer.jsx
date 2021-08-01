@@ -11,7 +11,7 @@ import {
     faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
 import { SiNextDotJs, SiMongodb } from "react-icons/si";
-import { theme } from "../../theme.config";
+import { mediaQueries, theme, bp } from "../../theme.config";
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${(props) => props.theme.color.primary};
@@ -43,12 +43,16 @@ const StyledUl = styled.ul`
 `;
 
 const StyledDiv = styled.div`
-    display: flex;
-    width: 200rem;
+    display: none;
 
+    ${mediaQueries(bp.desktop)} {
+        display: flex;
+    }
+
+    width: 200rem;
     .mover-1 {
         animation: moveSlideshow 30s linear infinite alternate-reverse;
-        width: 260rem;
+        width: 160rem;
     }
 
     @keyframes moveSlideshow {
