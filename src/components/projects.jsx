@@ -13,6 +13,10 @@ const StyledArticle = styled.article`
     width: 20rem;
     aspect-ratio: 1/1.1;
 
+    ${mediaQueries(bp.tablet)} {
+        width: 30rem;
+    }
+
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -108,9 +112,15 @@ const StyledProjectsGrid = styled.section`
     position: relative;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     place-items: center;
     gap: 2rem;
+
+    ${mediaQueries(bp.tablet)} {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    ${mediaQueries(bp.desktop)} {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
 
     .gradient-1 {
         background: #ffefba; /* fallback for old browsers */

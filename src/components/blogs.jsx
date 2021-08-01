@@ -12,10 +12,12 @@ const StyledContainer = styled.section`
     section {
         display: flex;
         flex-direction: column;
+
         ${mediaQueries(bp.desktop)} {
             flex-direction: row;
             justify-content: space-between;
-            padding: 0 4rem;
+            padding: 0 4rem 4rem;
+            width: 60vw;
         }
     }
 
@@ -47,8 +49,9 @@ const StyledContainer = styled.section`
         }
 
         ${mediaQueries(bp.desktop)} {
-            width: 20rem;
-            aspect-ratio: 1/1.1;
+            width: 18rem;
+            aspect-ratio: 1/1;
+            flex-direction: column;
         }
     }
 `;

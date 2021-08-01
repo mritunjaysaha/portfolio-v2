@@ -1,7 +1,6 @@
 /** jsxImportSour @emotion/react */
 import { ThemeProvider, css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { theme, mediaQueries, bp } from "../../theme.config";

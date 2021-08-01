@@ -5,9 +5,9 @@ import { theme } from "../../theme.config";
 import { ThemeProvider } from "@emotion/react";
 
 const StyledFooter = styled.footer`
-    /* position: absolute;
+    position: relative;
     bottom: 0;
-    left: 0; */
+    left: 0;
 
     display: flex;
     justify-content: center;

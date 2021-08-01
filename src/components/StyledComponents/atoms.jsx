@@ -25,7 +25,7 @@ export const StyledArticleBlog = styled.article`
         display: flex;
         flex-direction: column;
 
-        ${mediaQueries(bp.desktop)} {
+        ${mediaQueries(bp.tablet)} {
             flex-direction: row;
             font-size: ${(props) => props.theme.fontSize.fs24};
             padding: 2rem 0;
@@ -45,7 +45,7 @@ export const StyledArticleBlog = styled.article`
 
             color: ${(props) => props.theme.color.black};
 
-            ${mediaQueries(bp.desktop)} {
+            ${mediaQueries(bp.tablet)} {
                 margin-left: 1rem;
             }
         }

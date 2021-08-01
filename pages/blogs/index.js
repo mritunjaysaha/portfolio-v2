@@ -10,7 +10,7 @@ import styled from "@emotion/styled";
 
 const StyledSection = styled.section`
     padding: 4rem;
-    min-height: 80vh;
+    min-height: 100vh;
 `;
 
 const StyledH3 = styled.h3`
