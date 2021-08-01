@@ -8,11 +8,37 @@ import { useBlogData } from "../customHooks/blog";
 import { Anchor } from "../atoms/anchor";
 
 const StyledContainer = styled.section`
-    padding-top: 6rem;
+    section {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4rem;
+    }
 
     h3 {
         font-size: ${(props) => props.theme.fontSize.fs24};
         text-transform: uppercase;
+        text-align: center;
+    }
+
+    .link-div {
+        position: relative;
+        width: 20rem;
+        aspect-ratio: 1/1.1;
+
+        display: grid;
+
+        place-items: center;
+
+        border-radius: ${(props) => props.theme.border.radius};
+
+        background-color: ${(props) =>
+            props.theme.backgroundColor.secondaryBlue};
+
+        color: ${(props) => props.theme.color.black};
+
+        font-size: ${(props) => props.theme.fontSize.fs20};
+
+        cursor: pointer;
     }
 `;
 
@@ -27,21 +53,25 @@ const BlogAnchor = ({ href, reading_time_minutes, title }) => (
 const StyledArticle = styled.article`
     display: flex;
     justify-content: space-between;
-    padding-left: 4rem;
 
     p {
         padding: 1.5rem 0;
         overflow: hidden;
         color: ${(props) => props.theme.color.white};
-        font-size: ${(props) => props.theme.fontSize.fs20};
+        font-size: ${(props) => props.theme.fontSize.fs28};
+
+        &:first-of-type {
+            padding-top: 0;
+        }
 
         span {
             border-radius: 2.5px;
             background-color: ${(props) =>
                 props.theme.backgroundColor.secondaryBlue};
             padding: 0.4rem 1rem;
+            font-size: ${(props) => props.theme.fontSize.fs14};
 
-            color: ${(props) => props.theme.color.blue};
+            color: ${(props) => props.theme.color.black};
         }
     }
 `;
@@ -56,31 +86,32 @@ export function Blogs() {
     return (
         <ThemeProvider theme={theme}>
             <StyledContainer>
-                <h3>Popular Articles</h3>
-                <br />
-                <br />
+                <section>
+                    <StyledArticle>
+                        <div>
+                            {blogs
+                                ? blogs.map((blog, count = 0) => {
+                                      if (count < 3) {
+                                          return (
+                                              <BlogAnchor
+                                                  key={blog.url}
+                                                  href={blog.url}
+                                                  title={blog.title}
+                                                  reading_time_minutes={
+                                                      blog.reading_time_minutes
+                                                  }
+                                              />
+                                          );
+                                      }
+                                  })
+                                : ""}
+                        </div>
+                    </StyledArticle>
 
-                <StyledArticle>
-                    <div>
-                        {blogs
-                            ? blogs.map((blog, count = 0) => {
-                                  if (count < 3) {
-                                      return (
-                                          <BlogAnchor
-                                              key={blog.url}
-                                              href={blog.url}
-                                              title={blog.title}
-                                              reading_time_minutes={
-                                                  blog.reading_time_minutes
-                                              }
-                                          />
-                                      );
-                                  }
-                              })
-                            : ""}
-                    </div>
-                    <Link href="/blogs">Check out more</Link>
-                </StyledArticle>
+                    <Link href="/blogs" passHref>
+                        <div className="link-div">Check out more</div>
+                    </Link>
+                </section>
             </StyledContainer>
         </ThemeProvider>
     );

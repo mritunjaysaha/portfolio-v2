@@ -175,9 +175,6 @@ export function Projects() {
     return (
         <ThemeProvider theme={theme}>
             <StyledProjectsContainer>
-                <h3>Projects</h3>
-                <br />
-                <br />
                 <StyledProjectsGrid>
                     {projects.map((data, count = 0) => {
                         count++;
