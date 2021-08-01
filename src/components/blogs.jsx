@@ -6,8 +6,20 @@ import { useState } from "react";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { useBlogData } from "../customHooks/blog";
 import { BlogAnchor } from "../atoms/anchor";
-import { StyledArticleBlog, StyledIcon } from "./StyledComponents/atoms";
+import { StyledArticleBlog } from "./StyledComponents/atoms";
 import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const StyledArrowIcon = styled(FontAwesomeIcon)`
+    width: ${(props) => props.theme.fontSize.fs18};
+    font-size: ${(props) => props.theme.fontSize.fs18};
+
+    ${mediaQueries(bp.desktop)} {
+        width: ${(props) => props.theme.fontSize.fs40};
+        font-size: ${(props) => props.theme.fontSize.fs40};
+    }
+`;
+
 const StyledContainer = styled.section`
     section {
         display: flex;
@@ -17,7 +29,7 @@ const StyledContainer = styled.section`
             flex-direction: row;
             justify-content: space-between;
             padding: 0 4rem 4rem;
-            width: 60vw;
+            width: 80vw;
         }
     }
 
@@ -55,7 +67,8 @@ const StyledContainer = styled.section`
         }
 
         ${mediaQueries(bp.desktop)} {
-            width: 18rem;
+            width: 20rem;
+            margin-left: 12rem;
             aspect-ratio: 1/1;
             flex-direction: column;
         }
@@ -95,7 +108,7 @@ export function Blogs() {
                     <Link href="/blogs" passHref>
                         <div className="link-div">
                             <span>
-                                <StyledIcon
+                                <StyledArrowIcon
                                     width="1.8rem"
                                     icon={faArrowAltCircleRight}
                                 />
