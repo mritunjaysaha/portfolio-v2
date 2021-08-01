@@ -7,7 +7,11 @@ export default function ProjectsList() {
                 <li key={name}>
                     <h3>{name}</h3>
                     <a href={demo}>{demo}</a>
+                    <br />
                     <a href={repo}>{repo}</a>
+
+                    <br />
+                    <br />
                 </li>
             ))}
         </ol>

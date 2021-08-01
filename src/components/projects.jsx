@@ -183,8 +183,9 @@ export function Projects() {
             <StyledProjectsContainer>
                 <StyledProjectsGrid>
                     {projects.map((data, count = 0) => {
-                        count++;
-                        if (data.display) {
+                        if (data.display == true) {
+                            console.log({ count });
+                            count++;
                             return (
                                 <ProjectCard
                                     key={data.demo}
