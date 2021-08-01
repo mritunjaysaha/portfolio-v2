@@ -20,7 +20,7 @@ export const StyledArticleBlog = styled.article`
         padding: 1.5rem 0;
         overflow: hidden;
         color: ${(props) => props.theme.color.white};
-        font-size: ${(props) => props.theme.fontSize.fs28};
+        font-size: ${(props) => props.theme.fontSize.fs24};
 
         &:first-of-type {
             padding-top: 0;
@@ -36,4 +36,10 @@ export const StyledArticleBlog = styled.article`
             color: ${(props) => props.theme.color.black};
         }
     }
+`;
+
+export const StyledH3 = styled.h3`
+    font-size: ${(props) => props.theme.fontSize.fs40};
+    padding: 4rem 0;
+    text-align: center;
 `;

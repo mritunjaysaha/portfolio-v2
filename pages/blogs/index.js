@@ -9,7 +9,13 @@ import { StyledArticleBlog } from "../../src/components/StyledComponents/atoms";
 import styled from "@emotion/styled";
 
 const StyledSection = styled.section`
-    padding: 6rem;
+    padding: 4rem;
+    min-height: 80vh;
+`;
+
+const StyledH3 = styled.h3`
+    font-size: ${(props) => props.theme.fontSize.fs40};
+    padding-bottom: 4rem;
 `;
 
 export default function Blogs() {
@@ -27,6 +33,7 @@ export default function Blogs() {
             </Head>
             <ThemeProvider theme={theme}>
                 <StyledSection>
+                    <StyledH3>Latest Articles</StyledH3>
                     <StyledArticleBlog>
                         {blogs.map((blog) => (
                             <BlogAnchor
