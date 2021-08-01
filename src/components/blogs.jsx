@@ -48,6 +48,12 @@ const StyledContainer = styled.section`
             margin-right: 1rem;
         }
 
+        ${mediaQueries(bp.tablet)} {
+            width: max-content;
+            padding: 1rem 2rem;
+            margin: 0 auto;
+        }
+
         ${mediaQueries(bp.desktop)} {
             width: 18rem;
             aspect-ratio: 1/1;
