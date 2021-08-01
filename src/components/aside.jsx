@@ -12,7 +12,7 @@ import { theme, mediaQueries, bp } from "../../theme.config";
 import { CircularLoading } from "./circularLoading";
 
 const StyledAside = styled.aside`
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
