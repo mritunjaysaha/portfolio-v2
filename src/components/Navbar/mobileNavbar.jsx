@@ -6,13 +6,19 @@ import Link from "next/link";
 
 import { mediaQueries, theme, bp } from "../../../theme.config";
 import { navItems } from "../../../data";
-import { useState } from "react";
+
 import { StyledFontAwesomeIcon } from "../StyledComponents/atoms";
 import {
     faDev,
     faGithubSquare,
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+    faBook,
+    faHome,
+    faLaptopCode,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { Anchor } from "../../atoms/anchor";
 
 const Logo = styled.div`
@@ -35,6 +41,8 @@ const StyledClose = styled(IoCloseSharp)`
 `;
 
 const StyledNavbar = styled.nav`
+    position: relative;
+
     padding: 2rem 0;
 
     display: flex;
@@ -117,9 +125,39 @@ export function MobileNavbar() {
                 <section className="section-navbar">
                     <StyledClose onClick={handleClose} />
                     <ul>
-                        {navItems.map((item) => (
-                            <li key={item.name}>{item.name}</li>
-                        ))}
+                        <Link href={navItems[0].href} passHref>
+                            <li onClick={handleClose}>
+                                <span>
+                                    <StyledFontAwesomeIcon
+                                        width="2rem"
+                                        icon={faHome}
+                                    />
+                                </span>
+                                &nbsp;{navItems[0].name}
+                            </li>
+                        </Link>
+                        <Link href={navItems[1].href} passHref>
+                            <li onClick={handleClose}>
+                                <span>
+                                    <StyledFontAwesomeIcon
+                                        width="2rem"
+                                        icon={faBook}
+                                    />
+                                </span>
+                                &nbsp;{navItems[1].name}
+                            </li>
+                        </Link>
+                        <Link href={navItems[2].href} passHref>
+                            <li onClick={handleClose}>
+                                <span>
+                                    <StyledFontAwesomeIcon
+                                        width="2rem"
+                                        icon={faLaptopCode}
+                                    />
+                                </span>
+                                &nbsp;{navItems[2].name}
+                            </li>
+                        </Link>
                     </ul>
                     <div className="contact">
                         <Anchor href="https://dev.to/mritunjaysaha">
