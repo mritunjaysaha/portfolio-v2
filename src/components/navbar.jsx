@@ -51,21 +51,21 @@ const Nav = styled.nav`
             cursor: pointer;
             &:hover {
                 background-color: ${(props) =>
-                    props.theme.backgroundColor.primaryBlue};
+                    props.theme.backgroundColor.secondaryBlue};
                 color: ${(props) => props.theme.color.black};
             }
         }
 
         .ul-li--active {
-            color: ${(props) => props.theme.color.activeNav};
+            color: ${(props) => props.theme.color.blue};
             border-bottom: ${(props) => props.theme.border.thickness} solid
-                ${(props) => props.theme.color.activeNav};
+                ${(props) => props.theme.color.blue};
 
             &:hover {
                 background-color: ${(props) =>
                     props.theme.backgroundColor.primary};
 
-                color: ${(props) => props.theme.color.activeNav};
+                color: ${(props) => props.theme.color.blue};
             }
         }
     }
