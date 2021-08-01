@@ -6,6 +6,7 @@ import { useState } from "react";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { useBlogData } from "../customHooks/blog";
 import { BlogAnchor } from "../atoms/anchor";
+import { StyledArticleBlog } from "./StyledComponents/atoms";
 
 const StyledContainer = styled.section`
     section {
@@ -42,32 +43,6 @@ const StyledContainer = styled.section`
     }
 `;
 
-const StyledArticle = styled.article`
-    display: flex;
-    justify-content: space-between;
-
-    p {
-        padding: 1.5rem 0;
-        overflow: hidden;
-        color: ${(props) => props.theme.color.white};
-        font-size: ${(props) => props.theme.fontSize.fs28};
-
-        &:first-of-type {
-            padding-top: 0;
-        }
-
-        span {
-            border-radius: 2.5px;
-            background-color: ${(props) =>
-                props.theme.backgroundColor.secondaryBlue};
-            padding: 0.4rem 1rem;
-            font-size: ${(props) => props.theme.fontSize.fs14};
-
-            color: ${(props) => props.theme.color.black};
-        }
-    }
-`;
-
 export function Blogs() {
     const [blogs, setBlogs] = useState([]);
 
@@ -79,26 +54,24 @@ export function Blogs() {
         <ThemeProvider theme={theme}>
             <StyledContainer>
                 <section>
-                    <StyledArticle>
-                        <div>
-                            {blogs
-                                ? blogs.map((blog, count = 0) => {
-                                      if (count < 3) {
-                                          return (
-                                              <BlogAnchor
-                                                  key={blog.url}
-                                                  href={blog.url}
-                                                  title={blog.title}
-                                                  reading_time_minutes={
-                                                      blog.reading_time_minutes
-                                                  }
-                                              />
-                                          );
-                                      }
-                                  })
-                                : ""}
-                        </div>
-                    </StyledArticle>
+                    <StyledArticleBlog>
+                        {blogs
+                            ? blogs.map((blog, count = 0) => {
+                                  if (count < 3) {
+                                      return (
+                                          <BlogAnchor
+                                              key={blog.url}
+                                              href={blog.url}
+                                              title={blog.title}
+                                              reading_time_minutes={
+                                                  blog.reading_time_minutes
+                                              }
+                                          />
+                                      );
+                                  }
+                              })
+                            : ""}
+                    </StyledArticleBlog>
 
                     <Link href="/blogs" passHref>
                         <div className="link-div">Check out more</div>
