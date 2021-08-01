@@ -34,17 +34,17 @@ export function Aside() {
             <ThemeProvider theme={theme}>
                 <StyledAside>
                     <CircularLoading>
-                        <Anchor href="">
+                        <Anchor href="https://dev.to/mritunjaysaha/">
                             <StyledFontAwesomeIcon icon={faDev} />
                         </Anchor>
                     </CircularLoading>
                     <CircularLoading>
-                        <Anchor href="">
+                        <Anchor href="https://github.com/mritunjaysaha">
                             <StyledFontAwesomeIcon icon={faGithubSquare} />
                         </Anchor>
                     </CircularLoading>
                     <CircularLoading>
-                        <Anchor href="">
+                        <Anchor href="https://twitter.com/MritunjaySaha_">
                             <StyledFontAwesomeIcon icon={faTwitterSquare} />
                         </Anchor>
                     </CircularLoading>
