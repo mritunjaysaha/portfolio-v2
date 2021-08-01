@@ -37,6 +37,13 @@ export const theme = {
         radius: "0.25rem",
         thickness: "0.25rem",
     },
+    gradient: {
+        deg30: "30deg",
+        deg45: "45deg",
+        deg60: "60deg",
+        deg75: "75deg",
+        deg90: "deg90",
+    },
 };
 
 export const bp = {

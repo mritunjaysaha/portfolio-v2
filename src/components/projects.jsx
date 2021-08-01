@@ -4,15 +4,15 @@ import styled from "@emotion/styled";
 import { projects } from "../projectData/data";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { StyledFontAwesomeIcon } from "./StyledComponents/atoms";
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { Anchor } from "../atoms/anchor";
+import { useState } from "react";
 
 const StyledArticle = styled.article`
     position: relative;
     width: 20rem;
     aspect-ratio: 1/1.1;
-    border: 1px solid red;
 
     display: grid;
     grid-auto-columns: 1fr;
@@ -32,6 +32,7 @@ const StyledArticle = styled.article`
     width: 100%;
     height: 100%;
     padding: 2rem;
+    color: ${(props) => props.theme.color.black};
 
     .icons {
         grid-area: icons;
@@ -65,20 +66,21 @@ const StyledArticle = styled.article`
     }
 `;
 
+const StyledIcon = styled(StyledFontAwesomeIcon)`
+    color: ${(props) => props.theme.color.black};
+`;
+
 function ProjectCard(props) {
     const { name, repo, demo, stack } = props.data;
     return (
-        <StyledArticle>
+        <StyledArticle className={props.className}>
             {/* Icons */}
             <div className="icons">
                 <Anchor href={repo}>
-                    <StyledFontAwesomeIcon icon={faGithubAlt} width="2rem" />
+                    <StyledIcon icon={faGithub} width="2rem" />
                 </Anchor>
                 <Anchor href={demo}>
-                    <StyledFontAwesomeIcon
-                        icon={faExternalLinkAlt}
-                        width="2rem"
-                    />
+                    <StyledIcon icon={faExternalLinkAlt} width="2rem" />
                 </Anchor>
             </div>
             {/* TITLE */}
@@ -101,9 +103,61 @@ const StyledProjectsContainer = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     place-items: center;
     gap: 2rem;
-    ${mediaQueries[bp.desktop]} {
+
+    .gradient-1 {
+        background: #ffefba; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+            ${(props) => props.theme.gradient.deg30},
+            #ffffff,
+            #ffefba
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            ${(props) => props.theme.gradient.deg30},
+            #ffffff,
+            #ffefba
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .gradient-2 {
+        background-image: linear-gradient(
+            ${(props) => props.theme.gradient.deg45},
+            #f5f7fa 0%,
+            #c3cfe2 100%
+        );
+    }
+
+    .gradient-3 {
+        background-image: linear-gradient(
+            ${(props) => props.theme.gradient.deg45},
+            #ebbba7 0%,
+            #cfc7f8 100%
+        );
+    }
+
+    .gradient-4 {
+        background-image: linear-gradient(
+            ${(props) => props.theme.gradient.deg45},
+            #fff1eb 0%,
+            #ace0f9 100%
+        );
+    }
+
+    .gradient-5 {
+        background-image: linear-gradient(
+            ${(props) => props.theme.gradient.deg45},
+            #f3e7e9 0%,
+            #e3eeff 99%,
+            #e3eeff 100%
+        );
     }
 `;
+
+const gradient = [
+    "gradient-1",
+    "gradient-2",
+    "gradient-3",
+    "gradient-4",
+    "gradient-5",
+];
 
 export function Projects() {
     return (
@@ -113,9 +167,16 @@ export function Projects() {
                 <br />
                 <br />
                 <StyledProjectsContainer>
-                    {projects.map((data) => {
+                    {projects.map((data, count = 0) => {
+                        count++;
                         if (data.display) {
-                            return <ProjectCard key={data.demo} data={data} />;
+                            return (
+                                <ProjectCard
+                                    key={data.demo}
+                                    data={data}
+                                    className={gradient[count % 5]}
+                                />
+                            );
                         }
                     })}
                 </StyledProjectsContainer>
