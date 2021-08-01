@@ -31,7 +31,19 @@ const Nav = styled.nav`
         justify-content: space-between;
 
         ${mediaQueries(bp.desktop)} {
+            width: 60%;
+
+            li {
+                margin: 0;
+            }
+        }
+
+        ${mediaQueries(bp.desktopLarge)} {
             width: 40%;
+
+            li {
+                margin: 0;
+            }
         }
 
         li {

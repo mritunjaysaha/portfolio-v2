@@ -14,7 +14,7 @@ const StyledArrowIcon = styled(FontAwesomeIcon)`
     width: ${(props) => props.theme.fontSize.fs18};
     font-size: ${(props) => props.theme.fontSize.fs18};
 
-    ${mediaQueries(bp.desktop)} {
+    ${mediaQueries(bp.desktopLarge)} {
         width: ${(props) => props.theme.fontSize.fs40};
         font-size: ${(props) => props.theme.fontSize.fs40};
     }
@@ -25,11 +25,11 @@ const StyledContainer = styled.section`
         display: flex;
         flex-direction: column;
 
-        ${mediaQueries(bp.desktop)} {
+        ${mediaQueries(bp.desktopLarge)} {
             flex-direction: row;
             justify-content: space-between;
             padding: 0 4rem 4rem;
-            width: 80vw;
+            width: 100%;
         }
     }
 
@@ -66,7 +66,7 @@ const StyledContainer = styled.section`
             margin: 0 auto;
         }
 
-        ${mediaQueries(bp.desktop)} {
+        ${mediaQueries(bp.desktopLarge)} {
             width: 20rem;
             margin-left: 12rem;
             aspect-ratio: 1/1;

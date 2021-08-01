@@ -13,10 +13,6 @@ const StyledArticle = styled.article`
     width: 20rem;
     aspect-ratio: 1/1.1;
 
-    ${mediaQueries(bp.tablet)} {
-        width: 30rem;
-    }
-
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -27,10 +23,10 @@ const StyledArticle = styled.article`
         ". . . icons icons"
         ". . . . ."
         ". . . . ."
-        ". . . . ."
         "title title title title title"
         "title title title title title"
         "title title title title title"
+        "stack stack stack stack stack"
         "stack stack stack stack stack";
     width: 100%;
     height: 100%;
@@ -54,6 +50,7 @@ const StyledArticle = styled.article`
         grid-area: title;
 
         text-align: center;
+        font-family: "Roboto", sans-serif;
 
         h3 {
             text-transform: capitalize;
@@ -64,14 +61,36 @@ const StyledArticle = styled.article`
     .stack {
         grid-area: stack;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
 
         span {
             text-transform: uppercase;
 
             padding-right: 1rem;
-            white-space: pre;
+
+            width: max-content;
         }
+    }
+
+    ${mediaQueries(bp.tablet)} {
+        width: 30rem;
+    }
+
+    ${mediaQueries(bp.desktop)} {
+        width: 24rem;
+
+        .title {
+            font-size: ${(props) => props.theme.fontSize.fs18};
+        }
+
+        .stack {
+            font-size: ${(props) => props.theme.fontSize.fs16};
+        }
+    }
+
+    ${mediaQueries(bp.desktopLarge)} {
+        width: 30rem;
     }
 `;
 
