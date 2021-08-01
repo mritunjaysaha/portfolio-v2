@@ -3,10 +3,11 @@ import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 
 import { theme } from "../../theme.config";
+import { StyledFontAwesomeIcon } from "./StyledComponents/atoms";
 
 const StyledDiv = styled.div`
     z-index: 0;
-    div {
+    a {
         z-index: 10;
         overflow: hidden;
         background: none;
@@ -87,11 +88,25 @@ const StyledDiv = styled.div`
     }
 `;
 
-export function CircularLoading({ children }) {
+/**
+ *
+ * @param {icon} icon fontawesome icon
+ * @param {href} href url
+ * @returns
+ */
+
+export function CircularLoading({ icon, href }) {
     return (
         <ThemeProvider theme={theme}>
             <StyledDiv>
-                <div className="spin circle">{children}</div>
+                <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href={href}
+                    className="spin circle"
+                >
+                    <StyledFontAwesomeIcon icon={icon} />
+                </a>
             </StyledDiv>
         </ThemeProvider>
     );

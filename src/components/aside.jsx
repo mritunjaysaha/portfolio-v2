@@ -1,13 +1,11 @@
 /**@jsxImportSource @emotion/react */
 import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import { StyledFontAwesomeIcon } from "./StyledComponents/atoms";
 import {
     faDev,
     faGithubSquare,
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { Anchor } from "../atoms/anchor";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { CircularLoading } from "./circularLoading";
 
@@ -33,7 +31,7 @@ export function Aside() {
         <>
             <ThemeProvider theme={theme}>
                 <StyledAside>
-                    <CircularLoading>
+                    {/* <CircularLoading>
                         <Anchor href="https://dev.to/mritunjaysaha/">
                             <StyledFontAwesomeIcon icon={faDev} />
                         </Anchor>
@@ -47,7 +45,20 @@ export function Aside() {
                         <Anchor href="https://twitter.com/MritunjaySaha_">
                             <StyledFontAwesomeIcon icon={faTwitterSquare} />
                         </Anchor>
-                    </CircularLoading>
+                    </CircularLoading> */}
+
+                    <CircularLoading
+                        icon={faDev}
+                        href="https://dev.to/mritunjaysaha"
+                    />
+                    <CircularLoading
+                        icon={faGithubSquare}
+                        href="https://github.com/mritunjaysaha"
+                    />
+                    <CircularLoading
+                        icon={faTwitterSquare}
+                        href="https://twitter.com/MritunjaySaha_"
+                    />
                 </StyledAside>
             </ThemeProvider>
         </>
