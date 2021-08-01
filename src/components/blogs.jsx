@@ -2,10 +2,10 @@
 import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { useBlogData } from "../customHooks/blog";
-import { Anchor } from "../atoms/anchor";
+import { BlogAnchor } from "../atoms/anchor";
 
 const StyledContainer = styled.section`
     section {
@@ -41,14 +41,6 @@ const StyledContainer = styled.section`
         cursor: pointer;
     }
 `;
-
-const BlogAnchor = ({ href, reading_time_minutes, title }) => (
-    <p key={href}>
-        <Anchor href={href}>{title}</Anchor>
-        &nbsp;&nbsp;
-        <span>{reading_time_minutes} mins read</span>
-    </p>
-);
 
 const StyledArticle = styled.article`
     display: flex;

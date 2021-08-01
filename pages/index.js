@@ -11,6 +11,7 @@ const StyledH3 = styled.h3`
     padding: 4rem 0;
     text-align: center;
 `;
+
 export default function Home() {
     return (
         <div>
