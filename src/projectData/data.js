@@ -40,7 +40,7 @@ export const projects = [
         display: true,
         name: "Rock Paper Scissors",
         description: "A rock-paper-scissor game made using VanillaJS.",
-        repo: "rock-paper-scissor-wheat.vercel.app",
+        repo: "https://github.com/mritunjaysaha/rock-paper-scissor",
         demo: "https://rock-paper-scissor-wheat.vercel.app/",
         stack: ["JavaScript", "HTML", "CSS"],
     },
