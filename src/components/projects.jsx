@@ -1,4 +1,4 @@
-/**@JsxImportSource @emotion/react */
+/**@jsxImportSource @emotion/react */
 import { ThemeProvider, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { projects } from "../projectData/data";
@@ -7,7 +7,6 @@ import { StyledFontAwesomeIcon } from "./StyledComponents/atoms";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { Anchor } from "../atoms/anchor";
-import { useState } from "react";
 
 const StyledArticle = styled.article`
     position: relative;
@@ -51,6 +50,11 @@ const StyledArticle = styled.article`
         grid-area: title;
 
         text-align: center;
+
+        h3 {
+            text-transform: capitalize;
+            font-size: ${(props) => props.theme.fontSize.fs24};
+        }
     }
 
     .stack {
@@ -60,6 +64,7 @@ const StyledArticle = styled.article`
 
         span {
             text-transform: uppercase;
+
             padding-right: 1rem;
             white-space: pre;
         }
@@ -97,6 +102,13 @@ function ProjectCard(props) {
 }
 
 const StyledProjectsContainer = styled.section`
+    h3 {
+        font-size: ${(props) => props.theme.fontSize.fs24};
+        text-transform: uppercase;
+    }
+`;
+
+const StyledProjectsGrid = styled.section`
     position: relative;
 
     display: grid;
@@ -162,11 +174,11 @@ const gradient = [
 export function Projects() {
     return (
         <ThemeProvider theme={theme}>
-            <section>
+            <StyledProjectsContainer>
                 <h3>Projects</h3>
                 <br />
                 <br />
-                <StyledProjectsContainer>
+                <StyledProjectsGrid>
                     {projects.map((data, count = 0) => {
                         count++;
                         if (data.display) {
@@ -179,8 +191,8 @@ export function Projects() {
                             );
                         }
                     })}
-                </StyledProjectsContainer>
-            </section>
+                </StyledProjectsGrid>
+            </StyledProjectsContainer>
         </ThemeProvider>
     );
 }

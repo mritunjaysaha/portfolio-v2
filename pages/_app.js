@@ -1,4 +1,4 @@
-/** JsxImportSource @emotion/react */
+/** jsxImportSource @emotion/react */
 import { Global, ThemeProvider, css } from "@emotion/react";
 import "../styles/globals.css";
 import { Navbar } from "../src/components/navbar";

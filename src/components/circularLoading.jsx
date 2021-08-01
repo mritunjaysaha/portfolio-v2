@@ -1,4 +1,4 @@
-/**JsxImportSource @emotion/react */
+/**jsxImportSource @emotion/react */
 import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 

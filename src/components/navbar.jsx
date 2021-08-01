@@ -1,4 +1,4 @@
-/** JsxImportSour @emotion/react */
+/** jsxImportSour @emotion/react */
 import { ThemeProvider, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useState } from "react";

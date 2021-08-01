@@ -7,7 +7,6 @@ export async function useBlogData() {
     async function fetchData() {
         await axios("https://dev.to/api/articles?username=mritunjaysaha")
             .then((blogs) => {
-                console.log(blogs.data);
                 setBlogData(blogs.data);
             })
             .catch((err) => console.log(err.message));

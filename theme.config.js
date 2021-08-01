@@ -3,8 +3,8 @@ const color = {
     grey: "#767677",
     lightGrey: "#A4A4A4",
     white: "#f9f9f9",
-    blue: "hsl(199.2, 77.4%, 70%)",
-    lightBlue: "hsl(199.2, 77.4%, 40.9%)",
+    blue: "hsl(199.2, 77.4%, 40%)",
+    lightBlue: "hsl(199.2, 77.4%, 80.9%)",
 };
 
 export const theme = {
