@@ -13,7 +13,7 @@ const StyledSection = styled.section`
 
     align-items: center;
 
-    height: 100vh;
+    height: 80vh;
 
     ${mediaQueries(bp.desktop)} {
         display: grid;
