@@ -25,7 +25,7 @@ const StyledSection = styled.section`
 
     article {
         grid-row: 1;
-        grid-column: 2 / span 4;
+        grid-column: 1 / span 4;
         text-transform: capitalize;
         /**
         TODO Different font for h3 and p
