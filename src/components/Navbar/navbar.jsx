@@ -3,8 +3,9 @@ import { ThemeProvider, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { theme, mediaQueries, bp } from "../../theme.config";
-import { navItems } from "../../data";
+import { theme, mediaQueries, bp } from "../../../theme.config";
+import { navItems } from "../../../data";
+import { MobileNavbar } from "./mobileNavbar";
 
 const Logo = styled.div`
     margin-bottom: 1rem;
@@ -70,34 +71,42 @@ const Nav = styled.nav`
     }
 `;
 
-export function Navbar() {
+function DesktopNav() {
     const router = useRouter();
+
+    return (
+        <Nav>
+            <Logo>
+                <Link href="/">Mritunjay</Link>
+            </Logo>
+            <ul>
+                {navItems.map((items) => (
+                    <Link
+                        key={items.name}
+                        href={items.href ? items.href : ""}
+                        passHref
+                    >
+                        <li
+                            className={
+                                router.pathname === items.href
+                                    ? "ul-li--active"
+                                    : ""
+                            }
+                        >
+                            {items.name}
+                        </li>
+                    </Link>
+                ))}
+            </ul>
+        </Nav>
+    );
+}
+
+export function Navbar() {
     return (
         <ThemeProvider theme={theme}>
-            <Nav>
-                <Logo>
-                    <Link href="/">Mritunjay</Link>
-                </Logo>
-                <ul>
-                    {navItems.map((items) => (
-                        <Link
-                            key={items.name}
-                            href={items.href ? items.href : ""}
-                            passHref
-                        >
-                            <li
-                                className={
-                                    router.pathname === items.href
-                                        ? "ul-li--active"
-                                        : ""
-                                }
-                            >
-                                {items.name}
-                            </li>
-                        </Link>
-                    ))}
-                </ul>
-            </Nav>
+            <DesktopNav />
+            <MobileNavbar />
         </ThemeProvider>
     );
 }

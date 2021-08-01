@@ -1,7 +1,7 @@
 /** jsxImportSource @emotion/react */
 import { Global, ThemeProvider, css } from "@emotion/react";
 import "../styles/globals.css";
-import { Navbar } from "../src/components/navbar";
+import { Navbar } from "../src/components/Navbar/navbar";
 import { Footer } from "../src/components/footer";
 import { Aside } from "../src/components/aside";
 import { theme, mediaQueries, bp } from "../theme.config";
