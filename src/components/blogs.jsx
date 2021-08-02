@@ -27,12 +27,12 @@ export const StyledArticleBlog = styled.article`
             font-size: ${(props) => props.theme.fontSize.fs24};
             padding: 2rem 0;
         }
-        &:first-of-type {
-            padding-top: 0;
-        }
 
         span {
             width: max-content;
+
+            display: flex;
+            align-items: center;
 
             border-radius: 2.5px;
             background-color: ${(props) =>
@@ -96,6 +96,8 @@ const StyledContainer = styled.section`
         padding: 1rem 0;
 
         span {
+            display: flex;
+            align-items: center;
             margin-right: 1rem;
         }
 
@@ -110,6 +112,8 @@ const StyledContainer = styled.section`
             margin-left: 12rem;
             aspect-ratio: 1/1;
             flex-direction: column;
+
+            padding: 2rem;
         }
     }
 `;
