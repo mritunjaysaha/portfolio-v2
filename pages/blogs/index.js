@@ -1,10 +1,8 @@
 import { ThemeProvider } from "@emotion/react";
-import { useState } from "react";
 import Head from "next/head";
-import { useBlogData } from "../../src/customHooks/blog";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { BlogAnchor } from "../../src/atoms/anchor";
-import { StyledArticleBlog } from "../../src/components/StyledComponents/atoms";
+import { StyledArticleBlog } from "../../src/components/blogs";
 
 import styled from "@emotion/styled";
 
@@ -20,13 +18,7 @@ const StyledH3 = styled.h3`
     padding-bottom: 4rem;
 `;
 
-export default function Blogs() {
-    const [blogs, setBlogs] = useState([]);
-
-    useBlogData()
-        .then((data) => setBlogs(data))
-        .catch((err) => console.log(err));
-
+export default function Blogs({ blogs }) {
     return (
         <div>
             <Head>
@@ -50,4 +42,21 @@ export default function Blogs() {
             </ThemeProvider>
         </div>
     );
+}
+
+export async function getStaticProps() {
+    const res = await fetch(
+        "https://dev.to/api/articles?username=mritunjaysaha"
+    );
+    const blogs = await res.json();
+
+    if (!blogs) {
+        return {
+            notFound: true,
+        };
+    }
+
+    return {
+        props: { blogs },
+    };
 }

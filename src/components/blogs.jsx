@@ -6,9 +6,48 @@ import { useState } from "react";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { useBlogData } from "../customHooks/blog";
 import { BlogAnchor } from "../atoms/anchor";
-import { StyledArticleBlog } from "./StyledComponents/atoms";
 import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export const StyledArticleBlog = styled.article`
+    display: flex;
+    flex-direction: column;
+
+    p {
+        padding-bottom: 2rem;
+        overflow: hidden;
+        color: ${(props) => props.theme.color.white};
+        font-size: ${(props) => props.theme.fontSize.fs16};
+
+        display: flex;
+        flex-direction: column;
+
+        ${mediaQueries(bp.tablet)} {
+            flex-direction: row;
+            font-size: ${(props) => props.theme.fontSize.fs24};
+            padding: 2rem 0;
+        }
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+        span {
+            width: max-content;
+
+            border-radius: 2.5px;
+            background-color: ${(props) =>
+                props.theme.backgroundColor.secondaryBlue};
+            padding: 0.4rem 1rem;
+            font-size: ${(props) => props.theme.fontSize.fs14};
+
+            color: ${(props) => props.theme.color.black};
+
+            ${mediaQueries(bp.tablet)} {
+                margin-left: 1rem;
+            }
+        }
+    }
+`;
 
 const StyledArrowIcon = styled(FontAwesomeIcon)`
     width: ${(props) => props.theme.fontSize.fs18};
@@ -75,13 +114,7 @@ const StyledContainer = styled.section`
     }
 `;
 
-export function Blogs() {
-    const [blogs, setBlogs] = useState([]);
-
-    useBlogData()
-        .then((data) => setBlogs(data))
-        .catch((err) => console.log(err));
-
+export function Blogs({ blogs }) {
     return (
         <ThemeProvider theme={theme}>
             <StyledContainer>

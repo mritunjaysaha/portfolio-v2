@@ -7,7 +7,7 @@ import { Blogs } from "../src/components/blogs";
 import { theme, mediaQueries, bp } from "../theme.config";
 import { StyledH3 } from "../src/components/StyledComponents/atoms";
 
-export default function Home() {
+export default function Home({ blogs }) {
     return (
         <div>
             <Head>
@@ -21,9 +21,26 @@ export default function Home() {
                     <StyledH3>Projects</StyledH3>
                     <Projects />
                     <StyledH3>Blogs</StyledH3>
-                    <Blogs />
+                    <Blogs blogs={blogs} />
                 </main>
             </ThemeProvider>
         </div>
     );
+}
+
+export async function getStaticProps() {
+    const res = await fetch(
+        "https://dev.to/api/articles?username=mritunjaysaha"
+    );
+    const blogs = await res.json();
+
+    if (!blogs) {
+        return {
+            notFound: true,
+        };
+    }
+
+    return {
+        props: { blogs: blogs.slice(0, 3) },
+    };
 }
