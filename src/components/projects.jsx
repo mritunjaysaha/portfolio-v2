@@ -203,7 +203,6 @@ export function Projects() {
                 <StyledProjectsGrid>
                     {projects.map((data, count = 0) => {
                         if (data.display == true) {
-                            console.log({ count });
                             count++;
                             return (
                                 <ProjectCard

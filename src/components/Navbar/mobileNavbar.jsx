@@ -106,7 +106,6 @@ const StyledNavbar = styled.nav`
 export function MobileNavbar() {
     function handleOpen() {
         const el = document.querySelector(".section-navbar");
-        console.log(el);
         el.style.display = "grid";
     }
 
