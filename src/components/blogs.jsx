@@ -28,6 +28,10 @@ export const StyledArticleBlog = styled.article`
             padding: 2rem 0;
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+        /* reading time in minutes */
         span {
             width: max-content;
 
