@@ -99,6 +99,14 @@ const StyledContainer = styled.section`
 
         padding: 1rem 0;
 
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            box-shadow: 12px 9px 19px 0px rgba(150, 150, 151, 0.25);
+            -webkit-box-shadow: 12px 9px 19px 0px rgba(150, 150, 151, 0.25);
+            -moz-box-shadow: 12px 9px 19px 0px rgba(150, 150, 151, 0.25);
+        }
+
         span {
             display: flex;
             align-items: center;
