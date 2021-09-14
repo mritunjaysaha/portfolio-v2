@@ -1,9 +1,9 @@
 import { projects } from "../../src/projectData/data";
 
-export default function ProjectsList() {
+export default function ProjectsList({ selectedProjects }) {
     return (
         <ol>
-            {projects.map(({ name, demo, repo }) => (
+            {selectedProjects.map(({ name, demo, repo }) => (
                 <li key={name}>
                     <h3>{name}</h3>
                     <a href={demo}>{demo}</a>
@@ -16,4 +16,12 @@ export default function ProjectsList() {
             ))}
         </ol>
     );
+}
+
+export async function getStaticProps() {
+    const selectedProjects = projects;
+
+    return {
+        props: { selectedProjects },
+    };
 }

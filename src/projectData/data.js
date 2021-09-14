@@ -1,6 +1,7 @@
 export const projects = [
     {
-        display: true,
+        display: false,
+        projectList: true,
         name: "Markdown Previewer",
         description:
             "A React.js application that can be used to learn markdown. It has tools to help understand the use of markdown.",
@@ -10,7 +11,8 @@ export const projects = [
         gif: "markdown.gif",
     },
     {
-        display: true,
+        display: false,
+        projectList: true,
         name: "Shortly",
         description: "This project was a challenge from Frontend Mentor",
         repo: "https://github.com/mritunjaysaha/url-shortner",
@@ -19,11 +21,18 @@ export const projects = [
     },
     {
         display: true,
-        name: "Rock Paper Scissors",
-        description: "A rock-paper-scissor game made using VanillaJS.",
-        repo: "https://github.com/mritunjaysaha/rock-paper-scissor",
-        demo: "https://rock-paper-scissor-wheat.vercel.app/",
-        stack: ["JavaScript", "HTML", "CSS"],
+        name: "Link-tree clone",
+        description: "",
+        repo: "https://github.com/mritunjaysaha/link-tree-clone-frontend",
+        demo: "https://link-tree-clone.vercel.app",
+        stack: [
+            "MongoDB",
+            "Express",
+            "React.js",
+            "Node.js",
+            "Redux",
+            "Material-UI",
+        ],
     },
     {
         display: true,
@@ -33,6 +42,14 @@ export const projects = [
         repo: "https://github.com/mritunjaysaha/rest-countries-api-with-color-switching",
         demo: "https://rest-countries-api-with-color-switching.vercel.app/",
         stack: ["React.js", "Material-UI", "Sass"],
+    },
+    {
+        display: true,
+        name: "Rock Paper Scissors",
+        description: "A rock-paper-scissor game made using VanillaJS.",
+        repo: "https://github.com/mritunjaysaha/rock-paper-scissor",
+        demo: "https://rock-paper-scissor-wheat.vercel.app/",
+        stack: ["JavaScript", "HTML", "CSS"],
     },
     {
         display: false,
@@ -63,6 +80,7 @@ export const projects = [
     },
     {
         display: false,
+        projectList: true,
         name: "TicTacToe-Multiplayer",
         description:
             "A TicTacToe game made using socket.io to allow to users to play the game by sharing the room name.",
