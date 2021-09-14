@@ -54,7 +54,7 @@ const StyledArticle = styled.article`
 
         h3 {
             text-transform: capitalize;
-            font-size: ${(props) => props.theme.fontSize.fs24};
+            font-size: ${(props) => props.theme.fontSize.fs28};
         }
     }
 
@@ -63,6 +63,7 @@ const StyledArticle = styled.article`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        font-size: ${(props) => props.theme.fontSize.fs14};
 
         span {
             text-transform: uppercase;
@@ -81,7 +82,7 @@ const StyledArticle = styled.article`
         width: 24rem;
 
         .title {
-            font-size: ${(props) => props.theme.fontSize.fs18};
+            font-size: ${(props) => props.theme.fontSize.fs20};
         }
 
         .stack {
