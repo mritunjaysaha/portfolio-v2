@@ -60,9 +60,13 @@ const StyledArticle = styled.article`
 
     .stack {
         grid-area: stack;
+
+        display: grid;
+        place-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         font-size: ${(props) => props.theme.fontSize.fs14};
 
         span {

@@ -93,7 +93,7 @@ export function Intro() {
                         <h3 className="article-h3">mritunjay</h3>
                         <p className="article-p-developer">developer</p>
                         <p className="article-p-about">
-                            I&apos;m a frontend developer based in Assam, India
+                            Front-end developer who aims to write quality code
                         </p>
                         {/* <button className="article-button">hire me</button> */}
                     </article>
