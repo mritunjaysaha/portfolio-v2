@@ -10,9 +10,8 @@ import {
     faJs,
     faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
-import { SiNextDotJs, SiMongodb } from "react-icons/si";
+import { SiNextdotjs, SiMongodb } from "react-icons/si";
 import { mediaQueries, theme, bp } from "../../theme.config";
-
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${(props) => props.theme.color.primary};
     font-size: 12rem;
@@ -88,7 +87,7 @@ export function IconsContainer() {
                         <StyledFontAwesomeIcon icon={faNodeJs} />
                     </li>
                     <li>
-                        <SiNextDotJs className="si-icon" />
+                        <SiNextdotjs className="si-icon" />
                     </li>
                 </StyledUl>
             </StyledDiv>
