@@ -57,7 +57,7 @@ export function Aside() {
                     />
                     <CircularLoading
                         icon={faTwitterSquare}
-                        href="https://twitter.com/mritunjay__saha_"
+                        href="https://twitter.com/mritunjay__saha"
                     />
                 </StyledAside>
             </ThemeProvider>
