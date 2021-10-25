@@ -11,6 +11,7 @@ import { StyledFontAwesomeIcon } from "../StyledComponents/atoms";
 import {
     faDev,
     faGithubSquare,
+    faLinkedin,
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -168,6 +169,9 @@ export function MobileNavbar() {
                         </Anchor>
                         <Anchor href="https://twitter.com/MritunjaySaha_">
                             <StyledFontAwesomeIcon icon={faTwitterSquare} />
+                        </Anchor>
+                        <Anchor href="https://linkedin.com/in/mritunjaysaha">
+                            <StyledFontAwesomeIcon icon={faLinkedin} />
                         </Anchor>
                     </div>
                 </section>

@@ -5,6 +5,7 @@ import {
     faDev,
     faGithubSquare,
     faTwitterSquare,
+    faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { CircularLoading } from "./circularLoading";
@@ -58,6 +59,10 @@ export function Aside() {
                     <CircularLoading
                         icon={faTwitterSquare}
                         href="https://twitter.com/mritunjay__saha"
+                    />
+                    <CircularLoading
+                        icon={faLinkedin}
+                        href="https://linkedin.com/in/mritunjaysaha"
                     />
                 </StyledAside>
             </ThemeProvider>
