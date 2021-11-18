@@ -10,7 +10,8 @@ import {
     faJs,
     faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
-import { SiNextdotjs, SiMongodb } from "react-icons/si";
+
+import { SiNextdotjs, SiMongodb, SiRedux } from "react-icons/si";
 import { mediaQueries, theme, bp } from "../../theme.config";
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${(props) => props.theme.color.primary};
@@ -66,18 +67,6 @@ export function IconsContainer() {
             <StyledDiv>
                 <StyledUl className="mover-1">
                     <li>
-                        <StyledFontAwesomeIcon icon={faCss3Alt} />
-                    </li>
-                    <li>
-                        <StyledFontAwesomeIcon icon={faHtml5} />
-                    </li>
-                    <li>
-                        <StyledFontAwesomeIcon icon={faSass} />
-                    </li>
-                    <li>
-                        <SiMongodb className="si-icon" />
-                    </li>
-                    <li>
                         <StyledFontAwesomeIcon icon={faJs} />
                     </li>
                     <li>
@@ -87,7 +76,22 @@ export function IconsContainer() {
                         <StyledFontAwesomeIcon icon={faNodeJs} />
                     </li>
                     <li>
+                        <SiRedux className="si-icon" />
+                    </li>
+                    <li>
+                        <SiMongodb className="si-icon" />
+                    </li>
+                    <li>
                         <SiNextdotjs className="si-icon" />
+                    </li>
+                    <li>
+                        <StyledFontAwesomeIcon icon={faCss3Alt} />
+                    </li>
+                    <li>
+                        <StyledFontAwesomeIcon icon={faHtml5} />
+                    </li>
+                    <li>
+                        <StyledFontAwesomeIcon icon={faSass} />
                     </li>
                 </StyledUl>
             </StyledDiv>
