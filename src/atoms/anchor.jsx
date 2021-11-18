@@ -30,7 +30,7 @@ export const Anchor = ({ children, href }) => {
  */
 export const BlogAnchor = ({ href, reading_time_minutes, title }) => (
     <p key={href}>
-        <Anchor href={href}>{title}</Anchor>
-        <span>{reading_time_minutes} mins read</span>
+        👉 <Anchor href={href}>{title}</Anchor>
+        {/* <span>{reading_time_minutes} mins read</span> */}
     </p>
 );
