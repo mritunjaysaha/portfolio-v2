@@ -2,22 +2,22 @@
 import { ThemeProvider, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { useState } from "react";
 import { theme, mediaQueries, bp } from "../../theme.config";
-import { useBlogData } from "../customHooks/blog";
 import { BlogAnchor } from "../atoms/anchor";
 import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const StyledArticleBlog = styled.article`
+export const StyledBlogList = styled.ul`
     display: flex;
     flex-direction: column;
 
-    p {
+    li {
         padding-bottom: 2rem;
         overflow: hidden;
-        color: ${(props) => props.theme.color.white};
+
+        color: ${(props) => props.theme.color.secondary};
         font-size: ${(props) => props.theme.fontSize.fs16};
+        font-weight: bold;
 
         display: flex;
         flex-direction: column;
@@ -64,16 +64,14 @@ const StyledArrowIcon = styled(FontAwesomeIcon)`
 `;
 
 const StyledContainer = styled.section`
-    section {
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-        ${mediaQueries(bp.desktopLarge)} {
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 0 4rem 4rem;
-            width: 100%;
-        }
+    ${mediaQueries(bp.desktopLarge)} {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 4rem 4rem;
+        width: 100%;
     }
 
     h3 {
@@ -134,38 +132,36 @@ export function Blogs({ blogs }) {
     return (
         <ThemeProvider theme={theme}>
             <StyledContainer>
-                <section>
-                    <StyledArticleBlog>
-                        {blogs
-                            ? blogs.map((blog, count = 0) => {
-                                  if (count < 3) {
-                                      return (
-                                          <BlogAnchor
-                                              key={blog.url}
-                                              href={blog.url}
-                                              title={blog.title}
-                                              reading_time_minutes={
-                                                  blog.reading_time_minutes
-                                              }
-                                          />
-                                      );
-                                  }
-                              })
-                            : ""}
-                    </StyledArticleBlog>
+                <StyledBlogList>
+                    {blogs
+                        ? blogs.map((blog, count = 0) => {
+                              if (count < 3) {
+                                  return (
+                                      <BlogAnchor
+                                          key={blog.url}
+                                          href={blog.url}
+                                          title={blog.title}
+                                          reading_time_minutes={
+                                              blog.reading_time_minutes
+                                          }
+                                      />
+                                  );
+                              }
+                          })
+                        : ""}
+                </StyledBlogList>
 
-                    <Link href="/blogs" passHref>
-                        <div className="link-div">
-                            <span>
-                                <StyledArrowIcon
-                                    width="1.8rem"
-                                    icon={faArrowAltCircleRight}
-                                />
-                            </span>
-                            Check out more
-                        </div>
-                    </Link>
-                </section>
+                <Link href="/blogs" passHref>
+                    <div className="link-div">
+                        <span>
+                            <StyledArrowIcon
+                                width="1.8rem"
+                                icon={faArrowAltCircleRight}
+                            />
+                        </span>
+                        Check out more
+                    </div>
+                </Link>
             </StyledContainer>
         </ThemeProvider>
     );

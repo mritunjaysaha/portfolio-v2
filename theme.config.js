@@ -1,8 +1,8 @@
 const color = {
     black: "#111111",
     grey: "#969697",
-    lightGrey: "#A4A4A4",
-    white: "#f9f9f9",
+    lightGrey: "#ced4da",
+    white: "#ced4da",
     blue: "hsl(199.2, 77.4%, 50%)",
     lightBlue: "hsl(199.2, 77.4%, 68.9%)",
 };
