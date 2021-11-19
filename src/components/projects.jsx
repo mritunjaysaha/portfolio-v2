@@ -10,84 +10,90 @@ import { Anchor } from "../atoms/anchor";
 
 const StyledArticle = styled.article`
     position: relative;
-    width: 20rem;
+    width: 30rem;
     aspect-ratio: 1/1.1;
 
     display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
+    grid-template-rows: repeat(1fr, 8);
     grid-template-areas:
-        ". . . icons icons"
-        ". . . icons icons"
-        ". . . . ."
-        ". . . . ."
-        "title title title title title"
-        "title title title title title"
-        "title title title title title"
-        "stack stack stack stack stack"
-        "stack stack stack stack stack";
+        "icon"
+        "title"
+        "title"
+        "title"
+        "title"
+        "title"
+        "title"
+        "stack";
+
+    padding: 2rem;
     width: 100%;
     height: 100%;
-    padding: 2rem;
+
     color: ${(props) => props.theme.color.black};
 
     .icons {
-        grid-area: icons;
+        grid-area: icon;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-end;
+        height: max-content;
+        a {
+            margin-right: 1.2rem;
 
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        width: 6rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 
     .title {
         grid-area: title;
+        display: grid;
+        place-items: center;
 
-        text-align: center;
         font-family: "Roboto", sans-serif;
+        text-align: center;
 
         h3 {
             text-transform: capitalize;
-            font-size: ${(props) => props.theme.fontSize.fs28};
+            /* font-size: ${(props) => props.theme.fontSize.fs20}; */
+
+            /* font-size: 2.4rem; */
         }
     }
 
     .stack {
         grid-area: stack;
 
-        display: grid;
-        place-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
+
+        height: max-content;
+
         font-size: ${(props) => props.theme.fontSize.fs14};
 
         span {
             text-transform: uppercase;
-
             padding-right: 1rem;
-
             width: max-content;
+
+            &::last-child {
+                padding-right: 0;
+            }
         }
     }
 
     ${mediaQueries(bp.tablet)} {
-        width: 30rem;
+        .title {
+            h3 {
+                font-size: ${(props) => props.theme.fontSize.fs28};
+            }
+        }
     }
 
     ${mediaQueries(bp.desktop)} {
         width: 24rem;
-
-        .title {
-            font-size: ${(props) => props.theme.fontSize.fs20};
-        }
 
         .stack {
             font-size: ${(props) => props.theme.fontSize.fs16};
@@ -139,12 +145,7 @@ const StyledProjectsGrid = styled.section`
     place-items: center;
     gap: 2rem;
 
-    ${mediaQueries(bp.tablet)} {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    }
-    ${mediaQueries(bp.desktop)} {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    }
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
     .gradient-1 {
         background: #ffefba; /* fallback for old browsers */

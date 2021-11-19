@@ -24,7 +24,7 @@ export const StyledBlogList = styled.ul`
 
         ${mediaQueries(bp.tablet)} {
             flex-direction: row;
-            font-size: ${(props) => props.theme.fontSize.fs24};
+            font-size: ${(props) => props.theme.fontSize.fs20};
             padding: 2rem 0;
         }
 
