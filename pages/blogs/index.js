@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import Head from "next/head";
 import { theme, mediaQueries, bp } from "../../theme.config";
 import { BlogAnchor } from "../../src/atoms/anchor";
-import { StyledArticleBlog } from "../../src/components/blogs";
+import { StyledBlogList } from "../../src/components/blogs";
 
 import styled from "@emotion/styled";
 
@@ -28,7 +28,7 @@ export default function Blogs({ blogs }) {
             <ThemeProvider theme={theme}>
                 <StyledSection>
                     <StyledH3>Latest Articles</StyledH3>
-                    <StyledArticleBlog>
+                    <StyledBlogList>
                         {blogs.map((blog) => (
                             <BlogAnchor
                                 key={blog.url}
@@ -37,7 +37,7 @@ export default function Blogs({ blogs }) {
                                 title={blog.title}
                             />
                         ))}
-                    </StyledArticleBlog>
+                    </StyledBlogList>
                 </StyledSection>
             </ThemeProvider>
         </div>
