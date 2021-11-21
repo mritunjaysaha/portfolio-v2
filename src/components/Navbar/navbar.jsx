@@ -56,9 +56,9 @@ const Nav = styled.nav`
             font-weight: 700;
 
             border-radius: ${(props) => props.theme.border.radius};
-            border: 0 solid transparent;
             border-top: ${(props) => props.theme.border.thickness};
-            border-bottom: ${(props) => props.theme.border.thickness};
+            border-bottom: ${(props) => props.theme.border.thickness} solid
+                transparent;
 
             transition: 0.3s ease-in;
             cursor: pointer;

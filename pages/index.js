@@ -1,10 +1,9 @@
 import { ThemeProvider } from "@emotion/react";
-import styled from "@emotion/styled";
 import Head from "next/head";
 import { Intro } from "../src/components/intro";
 import { Projects } from "../src/components/projects";
 import { Blogs } from "../src/components/blogs";
-import { theme, mediaQueries, bp } from "../theme.config";
+import { theme } from "../theme.config";
 import { StyledH3 } from "../src/components/StyledComponents/atoms";
 
 export default function Home({ blogs }) {
