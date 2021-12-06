@@ -79,7 +79,7 @@ export const projects = [
         stack: ["JavaScript", "HTML", "CSS", "Chart.js", "Bootstrap"],
     },
     {
-        display: false,
+        display: true,
         projectList: true,
         name: "TicTacToe-Multiplayer",
         description:
