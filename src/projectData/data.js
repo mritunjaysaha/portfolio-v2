@@ -1,6 +1,39 @@
 export const projects = [
     {
-        display: false,
+        display: true,
+        name: "Link-tree clone",
+        description: "",
+        repo: "https://github.com/mritunjaysaha/link-tree-clone-frontend",
+        demo: "https://link-tree-clone.vercel.app",
+        stack: [
+            "MongoDB",
+            "Express",
+            "React.js",
+            "Node.js",
+            "Redux",
+            "Material-UI",
+        ],
+    },
+    {
+        display: true,
+        name: "Rock Paper Scissors",
+        description: "A rock-paper-scissor game made using VanillaJS.",
+        repo: "https://github.com/mritunjaysaha/rock-paper-scissor",
+        demo: "https://rock-paper-scissor-wheat.vercel.app/",
+        stack: ["JavaScript", "HTML", "CSS"],
+    },
+    {
+        display: true,
+        projectList: true,
+        name: "TicTacToe-Multiplayer",
+        description:
+            "A TicTacToe game made using socket.io to allow to users to play the game by sharing the room name.",
+        repo: "https://github.com/mritunjaysaha/tic-tac-toe-multiplayer",
+        demo: "http://tic-tac-toe-multiplayer.vercel.app/",
+        stack: ["JavaScript", "HTML", "SCSS", "Node.js", "Socket.io"],
+    },
+    {
+        display: true,
         projectList: true,
         name: "Markdown Previewer",
         description:
@@ -19,23 +52,9 @@ export const projects = [
         demo: "https://url-shortner-five.vercel.app/",
         stack: ["HTML", "Sass", "JavaScript"],
     },
+
     {
-        display: true,
-        name: "Link-tree clone",
-        description: "",
-        repo: "https://github.com/mritunjaysaha/link-tree-clone-frontend",
-        demo: "https://link-tree-clone.vercel.app",
-        stack: [
-            "MongoDB",
-            "Express",
-            "React.js",
-            "Node.js",
-            "Redux",
-            "Material-UI",
-        ],
-    },
-    {
-        display: true,
+        display: false,
         name: "Where in the world?",
         description:
             "A ReactJS application that shows the list of countries and their details. If the network is slow then it won't feel buggy as I have implemented loading-skeleton-placeholder.",
@@ -43,14 +62,7 @@ export const projects = [
         demo: "https://rest-countries-api-with-color-switching.vercel.app/",
         stack: ["React.js", "Material-UI", "Sass"],
     },
-    {
-        display: true,
-        name: "Rock Paper Scissors",
-        description: "A rock-paper-scissor game made using VanillaJS.",
-        repo: "https://github.com/mritunjaysaha/rock-paper-scissor",
-        demo: "https://rock-paper-scissor-wheat.vercel.app/",
-        stack: ["JavaScript", "HTML", "CSS"],
-    },
+
     {
         display: false,
         name: "Air Quality Monitor",
@@ -77,15 +89,5 @@ export const projects = [
         repo: "https://github.com/mritunjaysaha/coronavirus-tracker",
         demo: "https://covidupdate.netlify.app/",
         stack: ["JavaScript", "HTML", "CSS", "Chart.js", "Bootstrap"],
-    },
-    {
-        display: true,
-        projectList: true,
-        name: "TicTacToe-Multiplayer",
-        description:
-            "A TicTacToe game made using socket.io to allow to users to play the game by sharing the room name.",
-        repo: "https://github.com/mritunjaysaha/tic-tac-toe-multiplayer",
-        demo: "http://tic-tac-toe-multiplayer.vercel.app/",
-        stack: ["JavaScript", "HTML", "SCSS", "Node.js", "Socket.io"],
     },
 ];
