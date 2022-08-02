@@ -89,9 +89,9 @@ function DesktopNav() {
 
     return (
         <Nav>
-            <Logo>
+            {/* <Logo>
                 <Link href="/">Mritunjay</Link>
-            </Logo>
+            </Logo> */}
             <ul>
                 {navItems.map((items) => (
                     <Link

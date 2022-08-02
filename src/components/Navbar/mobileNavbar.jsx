@@ -48,6 +48,7 @@ const StyledNavbar = styled.nav`
     padding: 2rem 0;
 
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
 
@@ -119,9 +120,9 @@ export function MobileNavbar() {
     return (
         <ThemeProvider theme={theme}>
             <StyledNavbar>
-                <Logo>
+                {/* <Logo>
                     <Link href="/">Mritunjay</Link>
-                </Logo>
+                </Logo> */}
                 <StyledMenu onClick={handleOpen} />
                 <section className="section-navbar">
                     <StyledClose onClick={handleClose} />

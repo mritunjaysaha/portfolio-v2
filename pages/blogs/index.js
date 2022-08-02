@@ -7,6 +7,7 @@ import { StyledBlogList } from "../../src/components/blogs";
 import styled from "@emotion/styled";
 
 const StyledSection = styled.section`
+    font-family: 'Readex Pro', sans-serif !important;
     ${mediaQueries(bp.desktop)} {
         padding: 4rem;
         min-height: 100vh;
@@ -14,6 +15,7 @@ const StyledSection = styled.section`
 `;
 
 const StyledH3 = styled.h3`
+    font-family: "Poppins", sans-serif !important;
     font-size: ${(props) => props.theme.fontSize.fs40};
     padding-bottom: 4rem;
 `;

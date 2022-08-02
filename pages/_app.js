@@ -12,8 +12,7 @@ function MyApp({ Component, pageProps }) {
             <ThemeProvider theme={theme}>
                 <Global
                     styles={css`
-                        @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-                        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+                    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
                         body {
                             padding: 0 4rem;
 
@@ -21,11 +20,21 @@ function MyApp({ Component, pageProps }) {
                             background-color: ${theme.backgroundColor.primary};
                             color: ${theme.color.primary};
 
-                            font-family: "Be Vietnam", sans-serif;
+
+
 
                             ${mediaQueries(bp.desktop)} {
                                 padding: 0 12rem;
                             }
+                        }
+
+                        h3{
+                            font-family: "Poppins", sans-serif;
+                            font-weight: 600;
+                        }
+                        span{
+                            font-family: 'Readex Pro', sans-serif;    
+                            font-weight: 300;
                         }
                     `}
                 />
