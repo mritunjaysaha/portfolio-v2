@@ -50,6 +50,7 @@ export const bp = {
     tablet: 768,
     desktop: 992,
     desktopLarge: 1200,
+    desktopXL: 1600
 };
 
 // export const media = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);

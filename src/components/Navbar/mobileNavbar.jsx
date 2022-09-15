@@ -132,6 +132,7 @@ export function MobileNavbar() {
                                 <span>
                                     <StyledFontAwesomeIcon
                                         width="2rem"
+                                        height="2rem"
                                         icon={faHome}
                                     />
                                 </span>
@@ -143,6 +144,7 @@ export function MobileNavbar() {
                                 <span>
                                     <StyledFontAwesomeIcon
                                         width="2rem"
+                                        height="2rem"
                                         icon={faBook}
                                     />
                                 </span>
@@ -154,6 +156,7 @@ export function MobileNavbar() {
                                 <span>
                                     <StyledFontAwesomeIcon
                                         width="2rem"
+                                        height="2rem"
                                         icon={faLaptopCode}
                                     />
                                 </span>

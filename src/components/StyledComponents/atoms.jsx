@@ -10,6 +10,7 @@ export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${(props) => props.theme.color.primary};
     width: ${(props) => (props.width ? props.width : "3rem")};
     font-size: ${(props) => (props.width ? props.width : "3rem")};
+    height: ${(props) => (props.height ? props.height : "")};
 `;
 
 export const StyledH3 = styled.h3`
