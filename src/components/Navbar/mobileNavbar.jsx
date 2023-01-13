@@ -171,7 +171,7 @@ export function MobileNavbar() {
                         <Anchor href="https://github.com/mritunjaysaha">
                             <StyledFontAwesomeIcon icon={faGithubSquare} />
                         </Anchor>
-                        <Anchor href="https://twitter.com/MritunjaySaha_">
+                        <Anchor href="https://twitter.com/mritunjay__saha">
                             <StyledFontAwesomeIcon icon={faTwitterSquare} />
                         </Anchor>
                         <Anchor href="https://linkedin.com/in/mritunjaysaha">
