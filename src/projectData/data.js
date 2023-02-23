@@ -1,6 +1,15 @@
 export const projects = [
     {
         display: true,
+        name: "Wordle",
+        description: "A clone of the wordle game",
+        repo: "https://github.com/mritunjaysaha/wordle-ts",
+        demo: "https://wordle-ts.vercel.app",
+        stack: ["React.js", "TypeScript",
+            "TailwindCSS", "Vite"]
+    },
+    {
+        display: true,
         name: "Link-tree clone",
         description: "",
         repo: "https://github.com/mritunjaysaha/link-tree-clone-frontend",
@@ -23,7 +32,7 @@ export const projects = [
         stack: ["JavaScript", "HTML", "CSS"],
     },
     {
-        display: true,
+        display: false,
         projectList: true,
         name: "TicTacToe-Multiplayer",
         description:
