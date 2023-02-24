@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 
                     html{
                         ${mediaQueries(bp.desktopXL)}{
-                            font-size: 100%;
+                            font-size: 80%;
                         }
                     }
                     body {
