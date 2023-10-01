@@ -11,7 +11,7 @@ export default function Home({ blogs }) {
         <div>
             <Head>
                 <title>Mritunjay</title>
-                <meta name="description" content="Mritunjay Saha NERIST" />
+                <meta name="description" content="Mritunjay Saha" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ThemeProvider theme={theme}>

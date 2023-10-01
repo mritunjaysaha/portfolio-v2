@@ -51,18 +51,22 @@ export function Aside() {
                     <CircularLoading
                         icon={faDev}
                         href="https://dev.to/mritunjaysaha"
+                        alt="dev.to mritunjay saha"
                     />
                     <CircularLoading
                         icon={faGithubSquare}
                         href="https://github.com/mritunjaysaha"
+                        alt="github mritunjay saha"
                     />
                     <CircularLoading
                         icon={faTwitterSquare}
                         href="https://twitter.com/mritunjay__saha"
+                        alt="twitter mritunjay saha"
                     />
                     <CircularLoading
                         icon={faLinkedin}
                         href="https://linkedin.com/in/mritunjaysaha"
+                        alt="linkedin mritunjay saha"
                     />
                 </StyledAside>
             </ThemeProvider>

@@ -95,7 +95,7 @@ const StyledDiv = styled.div`
  * @returns
  */
 
-export function CircularLoading({ icon, href }) {
+export function CircularLoading({ icon, href, alt }) {
     return (
         <ThemeProvider theme={theme}>
             <StyledDiv>
@@ -104,6 +104,7 @@ export function CircularLoading({ icon, href }) {
                     target="_blank"
                     href={href}
                     className="spin circle"
+                    aria-label={alt}
                 >
                     <StyledFontAwesomeIcon icon={icon} />
                 </a>
