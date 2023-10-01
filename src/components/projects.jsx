@@ -111,10 +111,10 @@ function ProjectCard(props) {
         <StyledArticle className={props.className}>
             {/* Icons */}
             <div className="icons">
-                <Anchor href={repo}>
+                <Anchor href={repo} alt={name}>
                     <StyledIcon icon={faGithub} width="2rem" />
                 </Anchor>
-                <Anchor href={demo}>
+                <Anchor href={demo} alt={name}>
                     <StyledIcon icon={faExternalLinkAlt} width="2rem" />
                 </Anchor>
             </div>

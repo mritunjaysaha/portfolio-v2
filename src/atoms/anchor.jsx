@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
  * @param {href} href link
  * @returns
  */
-export const Anchor = ({ children, href }) => {
+export const Anchor = ({ children, href, alt }) => {
     return (
         <a
             css={css`
@@ -15,6 +15,7 @@ export const Anchor = ({ children, href }) => {
             target="_blank"
             rel="noopener noreferrer"
             href={href ? href : ""}
+            aria-label={alt}
         >
             {children}
         </a>
