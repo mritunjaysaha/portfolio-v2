@@ -2,11 +2,17 @@ export const projects = [
     {
         display: true,
         name: "Wordle",
-        description: "A clone of the wordle game",
+        description: "Get 6 chances to guess a 5-letter word",
         repo: "https://github.com/mritunjaysaha/wordle-ts",
         demo: "https://wordle-ts.vercel.app",
-        stack: ["React.js", "TypeScript",
-            "TailwindCSS", "Vite"]
+        stack: [
+            "React.js",
+            "TypeScript",
+            "TailwindCSS",
+            "Vite",
+            "Express.js",
+            "Node.js",
+        ],
     },
     {
         display: true,
