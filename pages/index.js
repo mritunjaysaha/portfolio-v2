@@ -13,6 +13,19 @@ export default function Home({ blogs }) {
                 <title>Mritunjay</title>
                 <meta name="description" content="Mritunjay Saha" />
                 <link rel="icon" href="/favicon.ico" />
+
+                <meta property="og:title" content="Mritunjay Saha" />
+                <meta
+                    property="og:description"
+                    content="Frontend Developer | React.js | TypeScript"
+                />
+                <meta property="og:image" content="/portfolio_og.png" />
+                <meta
+                    property="og:url"
+                    content="https://mritunjaysaha.netlify.app"
+                />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="Mritunjay" />
             </Head>
             <ThemeProvider theme={theme}>
                 <main>
