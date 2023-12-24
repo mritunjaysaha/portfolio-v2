@@ -19,7 +19,10 @@ export default function Home({ blogs }) {
                     property="og:description"
                     content="Frontend Developer | React.js | TypeScript"
                 />
-                <meta property="og:image" content="/portfolio_og.png" />
+                <meta
+                    property="og:image"
+                    content="https://github.com/mritunjaysaha/portfolio-v2/blob/main/public/portfolio_og.png"
+                />
                 <meta
                     property="og:url"
                     content="https://mritunjaysaha.netlify.app"
