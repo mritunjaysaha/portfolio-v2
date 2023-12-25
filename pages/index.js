@@ -8,7 +8,7 @@ import { StyledH3 } from "../src/components/StyledComponents/atoms";
 
 export default function Home({ blogs }) {
     return (
-        <div>
+        <>
             <Head>
                 <title>Mritunjay</title>
                 <meta name="description" content="Mritunjay Saha" />
@@ -39,7 +39,7 @@ export default function Home({ blogs }) {
                     <Blogs blogs={blogs} />
                 </main>
             </ThemeProvider>
-        </div>
+        </>
     );
 }
 
