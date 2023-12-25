@@ -2,7 +2,7 @@ import { projects } from "../../src/projectData/data";
 
 export default function ProjectsList({ selectedProjects }) {
     return (
-        <>
+        <div>
             <Head>
                 <title>Mritunjay | Projects</title>
                 <meta name="description" content="Mritunjay Saha" />
@@ -37,7 +37,7 @@ export default function ProjectsList({ selectedProjects }) {
                     </li>
                 ))}
             </ol>
-        </>
+        </div>
     );
 }
 
