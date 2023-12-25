@@ -23,27 +23,6 @@ const StyledH3 = styled.h3`
 export default function Blogs({ blogs }) {
     return (
         <ThemeProvider theme={theme}>
-            <Head>
-                <title>Mritunjay | Blogs</title>
-                <meta name="description" content="Mritunjay Saha" />
-                <link rel="icon" href="/favicon.ico" />
-
-                <meta property="og:title" content="Mritunjay Saha" />
-                <meta
-                    property="og:description"
-                    content="Frontend Developer | React.js | TypeScript"
-                />
-                <meta
-                    property="og:image"
-                    content="https://raw.githubusercontent.com/mritunjaysaha/portfolio-v2/main/public/portfolio_og.png"
-                />
-                <meta
-                    property="og:url"
-                    content="https://mritunjaysaha.netlify.app"
-                />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="Mritunjay" />
-            </Head>
             <StyledSection>
                 <StyledH3>Latest Articles</StyledH3>
                 <StyledBlogList>
