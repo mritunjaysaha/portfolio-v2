@@ -21,7 +21,7 @@ export default function Home({ blogs }) {
                 />
                 <meta
                     property="og:image"
-                    content="https://github.com/mritunjaysaha/portfolio-v2/blob/main/public/portfolio_og.png"
+                    content="https://raw.githubusercontent.com/mritunjaysaha/portfolio-v2/main/public/portfolio_og.png"
                 />
                 <meta
                     property="og:url"
