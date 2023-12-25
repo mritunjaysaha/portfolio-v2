@@ -1,8 +1,10 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/241bff02-8a97-4e08-84ef-ced186ced336/deploy-status)](https://app.netlify.com/sites/mritunjaysaha/deploys)
 
+![Portfolio OG](/public/portfolio_og.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![Portfolio OG](/public/portfolio_og.png)
 
 ## Getting Started
 
